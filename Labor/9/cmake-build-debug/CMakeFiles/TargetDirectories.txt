@@ -1,3 +1,0 @@
-/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/9/cmake-build-debug/CMakeFiles/9.dir
-/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/9/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/9/cmake-build-debug/CMakeFiles/rebuild_cache.dir
