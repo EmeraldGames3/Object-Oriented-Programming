@@ -4,14 +4,12 @@
  * This function uses Euclid's Algorithm to find the greatest common divisor of two natural numbers
 */
 int ggT(int x, int y) {
-
     while (x != y) {
         if (x > y)
             x -= y;
         else
             y -= x;
     }
-
     return x;
 }
 
@@ -20,9 +18,7 @@ int ggT(int x, int y) {
  * or false if they are not relative prime
 */
 bool isRelativePrime(int x, int y) {
-    if (ggT(x, y) == 1)
-        return true;
-
+    if (ggT(x, y) == 1) return true;
     return false;
 }
 
@@ -53,23 +49,19 @@ void printAllRelativePrimes(int n) {
  * After this function is called the programmer is responsible for freeing the memory occupied by the returned array
 **/
 int *findSubarrayWithLongestSum(const int numbers[], int &len) {
-
     int maxSum = 0;
     int currentSum = 0;
     int startIndex = 0;
     int endIndex = 0;
     int currentStartIndex = 0;
-
     //Kadane-Algorithm for the subArray with the biggest sum
     for (int i = 0; i < len; i++) {
         currentSum += numbers[i];
-
         if (currentSum > maxSum) {
             maxSum = currentSum;
             startIndex = currentStartIndex;
             endIndex = i;
         }
-
         if (currentSum < 0) {
             currentSum = 0;
             currentStartIndex = i + 1;
@@ -102,13 +94,12 @@ int main() {
 //    int len = sizeof(numbers) / sizeof(numbers[0]);
 
     int len;
-    int *numbers;
 
     //read numbers from the keyboard
     std::cout << "Enter the length of the array ";
     std::cin >> len;
 
-    numbers = new int[len];
+    int *numbers = new int[len];
 
     std::cout << "Now enter the contents of the array" << std::endl;
     for (int i = 0; i < len; i++)
@@ -123,6 +114,7 @@ int main() {
     std::cout << std::endl;
 
     delete[] maxSubarray;
+    delete[] numbers;
 
     return 0;
 }
