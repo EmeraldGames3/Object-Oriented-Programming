@@ -1,72 +1,68 @@
 #pragma once
-#include <string>
-
 
 class Length {
+public:
+    enum MeasuringUnit {
+        Kilometer,
+        Meter,
+        Centimeter,
+    };
+
+    enum ImperialMeasuringUnit {
+        Mile,
+        Yard,
+        Inch,
+    };
+
 private:
     float value;
-    std::string measuringUnit;
+    MeasuringUnit measuringUnit;
 
 public:
     //Constructor with 0 parameters
     Length();
 
-    //Constructor with 1 parameter
-    explicit Length(float _value);
-
     //Constructor with 2 parameters
-    Length(float _value, const std::string &_measuringUnit);
+    explicit Length(float _value, MeasuringUnit _measuringUnit = MeasuringUnit::Meter);
 
-    //Constructor for creating an exact copy of the object
+    //Copy constructor of the object
     Length(Length const &length);
 
+    //Value getter
     [[nodiscard]] float getValue() const;
 
-    std::string getMeasuringUnit();
+    //Measuring Unit getter
+    MeasuringUnit getMeasuringUnit();
 
+    //Add two Objects together
     Length add(const Length &other);
 
+    //Subtract an object from another
     Length subtract(const Length &other);
 
+    //Multiply a length with a scalar
     void scale(float number);
 
+    //Divide a length by a scalar
     void divide(float number);
 
+    //Return a string representation of the object
     std::string text();
 
+    //Converts the current metric value in an imperial value
+    float convertToImperial(ImperialMeasuringUnit imperialMeasuringUnit);
+
+    //Returns the current length in meters
+    float inMeters();
+
+    //Compare two lengths together
     short compare(const Length &other);
 
-    //Overload the '=' operator
-    Length &operator=(const Length &other) {
-        if (this != &other) {
-            this->value = other.value;
-            this->measuringUnit = other.measuringUnit;
-        }
-        return *this;
-    }
-
-    //Overload the '==' operator
-    bool operator==(const Length &other) const {
-        if (this->value != other.value) return false;
-        if (this->measuringUnit != other.measuringUnit) return false;
-        return true;
-    }
-
-    //Overload the * Operator
-    bool operator*(float number) { value *= number; }
-
-    //Overload the / Operator
-    bool operator/(float number) { value /= number; }
-
-    //Overload the + Operator
-    Length operator+(const Length &other){
-        if (this->measuringUnit != other.measuringUnit) throw std::exception();
-        return {this->value + other.value, this->measuringUnit};
-    }
-
-    //Overload the - Operator
-    Length operator-(const Length &other){
-        if (this->measuringUnit != other.measuringUnit) throw std::exception();
-        return {this->value - other.value, this->measuringUnit};
-    }
+    //Overloaded operators
+    Length &operator=(const Length &other);
+    bool operator==(const Length &other) const;
+    void operator*(float number);
+    void operator/(float number);
+    Length operator+(const Length &other);
+    Length operator-(const Length &other);
 };
