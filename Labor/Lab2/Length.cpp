@@ -1,3 +1,4 @@
+#include <exception>
 #include <iomanip>
 #include "Length.h"
 
@@ -40,20 +41,6 @@ void Length::divide(float number) {
     value /= number;
 }
 
-std::string Length::text() {
-    std::stringstream stream;
-    stream << std::fixed << std::setprecision(2) << value;
-
-    switch (measuringUnit) {
-        case MeasuringUnit::Meter:
-            return stream.str() + " Meter";
-        case MeasuringUnit::Centimeter:
-            return stream.str() + " Centimeter";
-        case MeasuringUnit::Kilometer:
-            return stream.str() + " Kilometer";
-    }
-}
-
 short Length::compare(const Length &other) {
     if (this->measuringUnit != other.measuringUnit)
         throw std::exception();
@@ -63,6 +50,20 @@ short Length::compare(const Length &other) {
         return 1;
     else
         return -1;
+}
+
+std::string Length::text() {
+    std::stringstream stream;
+    stream << std::fixed << std::setprecision(2) << value;
+
+    switch (measuringUnit) {
+        case MeasuringUnit::Meter:
+            return stream.str() + " Meters";
+        case MeasuringUnit::Centimeter:
+            return stream.str() + " Centimeters";
+        case MeasuringUnit::Kilometer:
+            return stream.str() + " Kilometers";
+    }
 }
 
 float Length::convertToImperial(Length::ImperialMeasuringUnit imperialMeasuringUnit) {
@@ -102,22 +103,6 @@ Length &Length::operator=(const Length &other) {
     return *this;
 }
 
-bool Length::operator==(const Length &other) const {
-    if (this->value != other.value)
-        return false;
-    if (this->measuringUnit != other.measuringUnit)
-        return false;
-    return true;
-}
-
-void Length::operator*(float number) {
-    value *= number;
-}
-
-void Length::operator/(float number) {
-    value /= number;
-}
-
 Length Length::operator+(const Length &other) {
     if (this->measuringUnit != other.measuringUnit)
         throw std::exception();
@@ -128,4 +113,46 @@ Length Length::operator-(const Length &other) {
     if (this->measuringUnit != other.measuringUnit)
         throw std::exception();
     return Length(this->value - other.value, this->measuringUnit);
+}
+
+void Length::operator*(float number) {
+    value *= number;
+}
+
+void Length::operator/(float number) {
+    if (number == 0)
+        throw std::exception();
+    value /= number;
+}
+
+bool Length::operator==(const Length &other) const {
+    if (this->value != other.value)
+        return false;
+    if (this->measuringUnit != other.measuringUnit)
+        return false;
+    return true;
+}
+
+bool Length::operator<(const Length &other) const {
+    if (this->measuringUnit != other.measuringUnit)
+        throw std::exception();
+    return (this->getValue() < other.getValue());
+}
+
+bool Length::operator<=(const Length &other) const {
+    if (this->measuringUnit != other.measuringUnit)
+        throw std::exception();
+    return (this->getValue() <= other.getValue());
+}
+
+bool Length::operator>(const Length &other) const {
+    if (this->measuringUnit != other.measuringUnit)
+        throw std::exception();
+    return (this->getValue() > other.getValue());
+}
+
+bool Length::operator>=(const Length &other) const {
+    if (this->measuringUnit != other.measuringUnit)
+        throw std::exception();
+    return (this->getValue() >= other.getValue());
 }

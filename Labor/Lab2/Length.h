@@ -60,9 +60,13 @@ public:
 
     //Overloaded operators
     Length &operator=(const Length &other);
-    bool operator==(const Length &other) const;
-    void operator*(float number);
-    void operator/(float number);
     Length operator+(const Length &other);
     Length operator-(const Length &other);
+    void operator*(float number);
+    void operator/(float number);
+    bool operator==(const Length &other) const;
+    bool operator<(const Length &other) const;
+    bool operator<=(const Length &other) const;
+    bool operator>(const Length &other) const;
+    bool operator>=(const Length &other) const;
 };
