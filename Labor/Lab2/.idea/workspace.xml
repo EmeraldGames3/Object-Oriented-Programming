@@ -21,16 +21,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10f0348c-8424-407a-a448-4acb69c97a1d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/L2_Oprisiu_Bogdan_Problem0_length.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L2_Oprisiu_Bogdan_Problem0_length.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/compile.bs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Length.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Length.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Length.h" beforeDir="false" afterPath="$PROJECT_DIR$/Length.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Length.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Length.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Lab2.dir/Length.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Lab2.dir/Length.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Lab2.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Lab2.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Lab2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Lab2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/L2_Oprisiu_Bogdan_Problem0_length_test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +47,9 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="7n1x9bu6" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -69,7 +76,7 @@
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "/home/bogdan/Programming/Uni/Data Structures and Algorithms/Labor/labor2",
+    "last_opened_file_path": "/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Lab2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -100,6 +107,7 @@
       <workItem from="1679486886759" duration="5193000" />
       <workItem from="1679493065211" duration="349000" />
       <workItem from="1679494132550" duration="146000" />
+      <workItem from="1680038602528" duration="3791000" />
     </task>
     <servers />
   </component>

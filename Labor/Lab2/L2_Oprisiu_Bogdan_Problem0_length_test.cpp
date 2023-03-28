@@ -1,8 +1,8 @@
 #include <iostream>
 #include <cassert>
-#include "Length.h"
+#include "L2_Oprisiu_Bogdan_Problem0_length.h"
 
-void test_constructors() {
+void testConstructors() {
     // Test default constructor
     Length len1;
     assert(len1.getValue() == 0.0f);
@@ -142,11 +142,60 @@ void testOverloadedOperators() {
     assert(exceptionThrown);
 }
 
+void testOperatorEquals() {
+    // Create two Length objects with almost equal values
+    Length length1(1.00001f);
+    Length length2(1.00002f);
+
+    // Check that the two objects are considered equal
+    assert(length1 == length2);
+}
+
+/**
+ * @brief Check if two floats are almost to each other
+ * @details Uses epsilon to determine the degree of accuracy of the comparison
+**/
+bool epsilonEquals(float a, float b, float epsilon = 0.001f) {
+    double diff = a - b;
+    if (diff < 0) {
+        diff = -diff;
+    }
+    return (diff < epsilon);
+}
+
+void testConvertToImperial() {
+    // Test with a Length object of value 1 meter
+    Length length(1);
+
+    // Test conversion to miles
+    assert(epsilonEquals(length.convertToImperial(Length::ImperialMeasuringUnit::Mile), 0.000621371f));
+
+    // Test conversion to yards
+    assert(epsilonEquals(length.convertToImperial(Length::ImperialMeasuringUnit::Yard), 1.09361f));
+
+    // Test conversion to inches
+    assert(epsilonEquals(length.convertToImperial(Length::ImperialMeasuringUnit::Inch), 39.3701f));
+
+    // Test with a Length object of value 2.5 meters
+    Length length2(2.5);
+
+    // Test conversion to miles
+    assert(epsilonEquals(length2.convertToImperial(Length::ImperialMeasuringUnit::Mile), 0.00155344f));
+
+    // Test conversion to yards
+    assert(epsilonEquals(length2.convertToImperial(Length::ImperialMeasuringUnit::Yard), 2.73494f));
+
+    // Test conversion to inches
+    assert(epsilonEquals(length2.convertToImperial(Length::ImperialMeasuringUnit::Inch), 98.4252f));
+}
+
 int main() {
-    test_constructors();
+    testConstructors();
     testGetters();
     testText();
     testOperatorFunctions();
     testOverloadedOperators();
+    testOperatorEquals();
+    testConvertToImperial();
     return 0;
 }

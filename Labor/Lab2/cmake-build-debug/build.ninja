@@ -49,14 +49,14 @@ cmake_ninja_workdir = /home/bogdan/Programming/Uni/Object$ Oriented$ Programming
 
 build cmake_object_order_depends_target_Lab2: phony || CMakeFiles/Lab2.dir
 
-build CMakeFiles/Lab2.dir/main.cpp.o: CXX_COMPILER__Lab2_Debug /home/bogdan/Programming/Uni/Object$ Oriented$ Programming/Labor/Lab2/main.cpp || cmake_object_order_depends_target_Lab2
-  DEP_FILE = CMakeFiles/Lab2.dir/main.cpp.o.d
+build CMakeFiles/Lab2.dir/L2_Oprisiu_Bogdan_Problem0_length_test.cpp.o: CXX_COMPILER__Lab2_Debug /home/bogdan/Programming/Uni/Object$ Oriented$ Programming/Labor/Lab2/L2_Oprisiu_Bogdan_Problem0_length_test.cpp || cmake_object_order_depends_target_Lab2
+  DEP_FILE = CMakeFiles/Lab2.dir/L2_Oprisiu_Bogdan_Problem0_length_test.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++20
   OBJECT_DIR = CMakeFiles/Lab2.dir
   OBJECT_FILE_DIR = CMakeFiles/Lab2.dir
 
-build CMakeFiles/Lab2.dir/Length.cpp.o: CXX_COMPILER__Lab2_Debug /home/bogdan/Programming/Uni/Object$ Oriented$ Programming/Labor/Lab2/Length.cpp || cmake_object_order_depends_target_Lab2
-  DEP_FILE = CMakeFiles/Lab2.dir/Length.cpp.o.d
+build CMakeFiles/Lab2.dir/L2_Oprisiu_Bogdan_Problem0_length.cpp.o: CXX_COMPILER__Lab2_Debug /home/bogdan/Programming/Uni/Object$ Oriented$ Programming/Labor/Lab2/L2_Oprisiu_Bogdan_Problem0_length.cpp || cmake_object_order_depends_target_Lab2
+  DEP_FILE = CMakeFiles/Lab2.dir/L2_Oprisiu_Bogdan_Problem0_length.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++20
   OBJECT_DIR = CMakeFiles/Lab2.dir
   OBJECT_FILE_DIR = CMakeFiles/Lab2.dir
@@ -69,7 +69,7 @@ build CMakeFiles/Lab2.dir/Length.cpp.o: CXX_COMPILER__Lab2_Debug /home/bogdan/Pr
 #############################################
 # Link the executable Lab2
 
-build Lab2: CXX_EXECUTABLE_LINKER__Lab2_Debug CMakeFiles/Lab2.dir/main.cpp.o CMakeFiles/Lab2.dir/Length.cpp.o
+build Lab2: CXX_EXECUTABLE_LINKER__Lab2_Debug CMakeFiles/Lab2.dir/L2_Oprisiu_Bogdan_Problem0_length_test.cpp.o CMakeFiles/Lab2.dir/L2_Oprisiu_Bogdan_Problem0_length.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/Lab2.dir
   POST_BUILD = :

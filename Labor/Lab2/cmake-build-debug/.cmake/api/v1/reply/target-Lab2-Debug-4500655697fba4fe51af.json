@@ -103,18 +103,18 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "main.cpp",
+			"path" : "L2_Oprisiu_Bogdan_Problem0_length_test.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Length.cpp",
+			"path" : "L2_Oprisiu_Bogdan_Problem0_length.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Length.h",
+			"path" : "L2_Oprisiu_Bogdan_Problem0_length.h",
 			"sourceGroupIndex" : 1
 		}
 	],
