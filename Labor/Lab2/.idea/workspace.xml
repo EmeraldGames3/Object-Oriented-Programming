@@ -21,20 +21,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10f0348c-8424-407a-a448-4acb69c97a1d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/L2_Oprisiu_Bogdan_Problem0_length.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L2_Oprisiu_Bogdan_Problem0_length.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compile.bs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L2_Oprisiu_Bogdan_Problem0_length.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L2_Oprisiu_Bogdan_Problem0_length_test.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-03-29T10-50-55-0268.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/program" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/.idea/Labor3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/DependancyStructuredMatrix.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/DependancyStructuredMatrix.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/.cmake/api/v1/query/cache-v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/.cmake/api/v1/reply/cache-v2-3525fd939e705f9cffb1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-6ec75b8800f960a5901e.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-bb972411945cea7e1b37.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-f5ebdc15457944623624.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/.cmake/api/v1/reply/index-2023-03-29T11-27-52-0800.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/.cmake/api/v1/reply/target-Labor3-Debug-1bcf5a0d3ce55f480982.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-5e864d45b6495c775afc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/CMakeFiles/3.24.2/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/CMakeFiles/3.24.2/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/CMakeFiles/3.24.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/CMakeFiles/3.24.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/CMakeFiles/3.24.2/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/CMakeFiles/3.24.2/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/CMakeFiles/3.24.2/CompilerIdC/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/CMakeFiles/3.24.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/CMakeFiles/3.24.2/CompilerIdCXX/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/CMakeFiles/Labor3.dir/DependancyStructuredMatrix.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/CMakeFiles/Labor3.dir/main.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/build.ninja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor3/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Length.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Length.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/L2_Oprisiu_Bogdan_Problem0_length.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/L2_Oprisiu_Bogdan_Problem0_length.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L2_Oprisiu_Bogdan_Problem0_length.h" beforeDir="false" afterPath="$PROJECT_DIR$/L2_Oprisiu_Bogdan_Problem0_length.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-03-28T22-02-39-0507.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Lab2.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Lab2.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Lab2.dir/L2_Oprisiu_Bogdan_Problem0_length.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Lab2.dir/L2_Oprisiu_Bogdan_Problem0_length.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Lab2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Lab2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/L2_Oprisiu_Bogdan_Problem0_length_test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,23 +109,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "last_opened_file_path": "/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Lab2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Lab2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Lab2" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Lab2" TARGET_NAME="Lab2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Lab2" RUN_TARGET_NAME="Lab2">
       <method v="2">
@@ -108,6 +150,9 @@
       <workItem from="1679493065211" duration="349000" />
       <workItem from="1679494132550" duration="146000" />
       <workItem from="1680038602528" duration="3791000" />
+      <workItem from="1680087054984" duration="261000" />
+      <workItem from="1680087383675" duration="1607000" />
+      <workItem from="1680092818996" duration="922000" />
     </task>
     <servers />
   </component>

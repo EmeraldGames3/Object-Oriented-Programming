@@ -88,7 +88,7 @@ short Length::compare(const Length &other) {
  * @brief Converts the object to a string
  * @details We use a precision of 2 digits for the representation of the value
  * @return A string representation of the object
- */
+ **/
 std::string Length::text() {
     std::stringstream stream;
     stream << std::fixed << std::setprecision(2) << value;
@@ -168,7 +168,6 @@ bool Length::operator==(const Length &other) const {
     const float epsilon = 0.0001f;
     return (std::abs(this->value - other.value) < epsilon) && (this->measuringUnit == other.measuringUnit);
 }
-
 
 bool Length::operator<(const Length &other) const {
     if (this->measuringUnit != other.measuringUnit)

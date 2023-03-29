@@ -5,13 +5,13 @@ public:
     enum MeasuringUnit {
         Kilometer,
         Meter,
-        Centimeter,
+        Centimeter
     };
 
     enum ImperialMeasuringUnit {
         Mile,
         Yard,
-        Inch,
+        Inch
     };
 
 private:
