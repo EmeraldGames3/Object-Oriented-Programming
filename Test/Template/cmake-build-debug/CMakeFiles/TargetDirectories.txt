@@ -1,0 +1,3 @@
+/home/bogdan/Programming/Uni/Object Oriented Programming/Test/Template/cmake-build-debug/CMakeFiles/Template.dir
+/home/bogdan/Programming/Uni/Object Oriented Programming/Test/Template/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/bogdan/Programming/Uni/Object Oriented Programming/Test/Template/cmake-build-debug/CMakeFiles/rebuild_cache.dir

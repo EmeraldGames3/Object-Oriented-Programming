@@ -1,0 +1,5 @@
+# ninja log v5
+1	24	1680636991055428005	CMakeFiles/Template.dir/MyContainer.cpp.o	20b98db0e786c1e3
+0	367	1680637001132479444	CMakeFiles/Template.dir/main.cpp.o	8d645bdc89727a8a
+367	429	1680637001193479755	Template	b9a3e1cd554f150c
+0	28	1680637056325761180	build.ninja	4ad5b63c85ac585a
