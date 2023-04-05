@@ -1,37 +1,69 @@
 #pragma once
 #include <string>
+#include <stdexcept>
 
 using std::string;
 
+// Type can only be bool, int, float or double
 template<typename Type>
 class DSM {
 private:
+    int elementCount;
+    int capacity; // Capacity is used to avoid frequent resizing
     Type **matrix;
     string *elementNames;
-    int elementCount;
 
 public:
-    explicit DSM(int elementCount);
+    //Resize the elementNames array
+    void resizeElementNames(int newCapacity);
 
-    DSM(string *elementNames, int _elementCount);
+    //Resize the matrix
+    void resizeMatrix(int newCapacity);
 
-    DSM(const DSM &other);
+    //Automatically resize the elementNames array and the matrix
+    void automaticResize();
 
+    //get the index of an element in elementNames
+    int getIndex(const string &str);
+
+    //Default constructor with implicit parameters
+    explicit DSM(int _elementCount = 2);
+
+    //Constructor with two parameters
+    DSM(string *_elementNames, int _elementCount);
+
+    //Copy constructor
+    DSM(const DSM<Type> &other);
+
+    //Destructor
     ~DSM();
 
+    //Get the size of the matrix
     int size();
 
+    //Get the capacity of the DSM
+    int getCapacity();
+
+    //Get the name of an element
     string getName(int index);
 
-    void setElementName(int index, string elementName);
+    //Set the name of an element
+    void setElementName(int index, const string& elementName);
 
-    void addLink(string fromElement, string toElement, Type weight);
+    //Add a link between two Elements
+    void addLink(const string& fromElement, const string& toElement, Type weight);
 
-    void deleteLink(string fromElement, string toElement);
+    //Delete a link between two elements
+    void deleteLink(const string& fromElement, const string& toElement);
 
-    bool hasLink(string fromElement, string toElement);
+    //Check if two elements have a link
+    bool hasLink(const string& fromElement, const string& toElement);
 
-    int linkWeight(string fromElement, string toElement);
+    //Return the weight of the Link
+    Type linkWeight(const string& fromElement, const string& toElement);
+
+    //Check if an element exists in the DSM
+    bool hasElement(const string& element);
 
     int countToLinks(string elementName);
 
