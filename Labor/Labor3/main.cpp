@@ -132,6 +132,39 @@ void testAddLinkExtended(){
     assert(!dsm.hasLink("A", "B"));
 }
 
+void testResizeMatrix() {
+    DSM<int> graph(3);
+
+    // Resize the matrix and check that the capacity is correct
+    graph.resizeMatrix(5);
+    assert(graph.getCapacity() == 5);
+
+    // Resize the matrix again with a smaller capacity and check for an exception
+    try {
+        graph.resizeMatrix(2);
+        assert(false);
+    } catch (const std::out_of_range& e) {
+        assert(std::string(e.what()) == "Index out of range");
+    }
+}
+
+void testGetIndex() {
+    DSM<int> graph(3);
+
+    // Add some element names
+    graph.setElementName(0, "A");
+    graph.setElementName(1, "B");
+    graph.setElementName(2, "C");
+
+    // Get the index of an element that exists in the DSM
+    int indexA = graph.getIndex("A");
+    assert(indexA == 0);
+
+    // Get the index of an element that doesn't exist in the DSM
+    int indexD = graph.getIndex("D");
+    assert(indexD == -1);
+}
+
 int main() {
     DSM<int> test1(3);
     DSM<float> test2(3);
@@ -142,7 +175,9 @@ int main() {
     test_getName();
     testSetElementName();
     testResizeElementNames();
+    testResizeMatrix();
+    testGetIndex();
     testAddLinkShort();
-//    testAddLinkExtended();
+    testAddLinkExtended();
     return 0;
 }

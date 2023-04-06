@@ -27,7 +27,7 @@ public:
     int getIndex(const string &str);
 
     //Default constructor with implicit parameters
-    explicit DSM(int _elementCount = 2);
+    explicit DSM(int _elementCount = 0);
 
     //Constructor with two parameters
     DSM(string *_elementNames, int _elementCount);
