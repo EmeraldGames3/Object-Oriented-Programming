@@ -22,6 +22,7 @@ private:
     friend void testAddLink1();
     friend void testAddLink2();
     friend void testAutomaticResize();
+    friend void testDSM();
 
     //Resize the elementNames array
     void resizeElementNames(int newCapacity);

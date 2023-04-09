@@ -2,6 +2,7 @@
 #include "TestMatrix.h"
 #include "DependancyStructuredMatrix.h"
 
+using std::cout;
 
 void testConstructors() {
     DSM<int> dsm1(10);
@@ -35,13 +36,13 @@ void test_getName() {
     try {
         dsm.getName(-1);
         assert(false); // should have thrown an exception
-    } catch (const std::invalid_argument& e) {
+    } catch (const std::invalid_argument &e) {
         assert(std::string(e.what()) == "Invalid index");
     }
     try {
         dsm.getName(5);
         assert(false); // should have thrown an exception
-    } catch (const std::invalid_argument& e) {
+    } catch (const std::invalid_argument &e) {
         assert(std::string(e.what()) == "Invalid index");
     }
 }
@@ -57,7 +58,7 @@ void testSetElementName() {
     try {
         dsm.setElementName(3, "element 3");
         assert(false); // should not get here
-    } catch (const std::invalid_argument& e) {
+    } catch (const std::invalid_argument &e) {
         assert(e.what() == std::string("Invalid index"));
     }
 }
@@ -80,7 +81,7 @@ void testResizeElementNames() {
     try {
         dsm.resizeElementNames(1);
         assert(false);
-    } catch (const std::out_of_range& e) {
+    } catch (const std::out_of_range &e) {
         assert(string(e.what()) == "Index out of range");
     }
 
@@ -119,11 +120,11 @@ void testAddLink1() {
     assert(dsm.hasLink("D", "E"));
 }
 
-void testAddLink2(){
+void testAddLink2() {
     DSM<int> dsm(3);
 
     // Adding a link between two existing elements
-    dsm.setElementName(0,"A");
+    dsm.setElementName(0, "A");
     dsm.setElementName(1, "B");
     dsm.addLink("A", "B", 5);
     assert(dsm.hasLink("A", "B"));
@@ -152,7 +153,7 @@ void testResizeMatrix() {
     try {
         graph.resizeMatrix(2);
         assert(false);
-    } catch (const std::out_of_range& e) {
+    } catch (const std::out_of_range &e) {
         assert(std::string(e.what()) == "Index out of range");
     }
 }
@@ -174,7 +175,7 @@ void testGetIndex() {
     assert(indexD == -1);
 }
 
-void testAutomaticResize(){
+void testAutomaticResize() {
     DSM<int> dsm(2);  // start with capacity 2
     dsm.setElementName(0, "A");
     dsm.setElementName(1, "B");
@@ -204,4 +205,88 @@ void testAutomaticResize(){
     assert(dsm.capacity == 5);
     assert(dsm.matrix[0][1] == 0);
     assert(dsm.matrix[1][0] == 0);
+}
+
+void testDSM() {
+    // Create a DSM for integers
+    DSM<int> dsm(5);
+
+    // Add some elements
+    dsm.setElementName(0, "A");
+    dsm.setElementName(1, "B");
+    dsm.setElementName(2, "C");
+    dsm.setElementName(3, "D");
+    dsm.setElementName(4, "E");
+
+    // Add some links
+    dsm.addLink("A", "B", 1);
+    dsm.addLink("B", "C", 2);
+    dsm.addLink("C", "D", 3);
+    dsm.addLink("D", "E", 4);
+
+    // Check the link weight
+    assert(dsm.linkWeight("A", "B") == 1);
+    assert(dsm.linkWeight("B", "C") == 2);
+    assert(dsm.linkWeight("C", "D") == 3);
+    assert(dsm.linkWeight("D", "E") == 4);
+
+    // Check if a link exists
+    assert(dsm.hasLink("A", "B"));
+    assert(dsm.hasLink("B", "C"));
+    assert(dsm.hasLink("C", "D"));
+    assert(dsm.hasLink("D", "E"));
+    assert(!dsm.hasLink("A", "C"));
+    assert(!dsm.hasLink("B", "D"));
+    assert(!dsm.hasLink("C", "E"));
+
+    // Remove a link
+    dsm.deleteLink("C", "D");
+    assert(!dsm.hasLink("C", "D"));
+
+    // Add some more links
+    dsm.addLink("A", "C", 5);
+    dsm.addLink("B", "D", 6);
+    dsm.addLink("C", "E", 7);
+
+    // Check the link weight
+    assert(dsm.linkWeight("A", "B") == 1);
+    assert(dsm.linkWeight("B", "C") == 2);
+    assert(dsm.linkWeight("A", "C") == 5);
+    assert(dsm.linkWeight("B", "D") == 6);
+    assert(dsm.linkWeight("C", "E") == 7);
+    assert(dsm.linkWeight("D", "E") == 4);
+
+    // Check the total number of links
+    assert(dsm.countAllLinks() == 6);
+
+    /*
+    for (int i = 0; i < dsm.elementCount; i++) {
+        for (int j = 0; j < dsm.elementCount; j++) {
+            cout << dsm.elementNames[i] << ":" << dsm.elementNames[j] << " " << dsm.matrix[i][j] << " ";
+        }
+        cout << "\n";
+    }
+    */
+
+    // Check the number of links from an element
+    assert(dsm.countFromLinks("A") == 2);
+    assert(dsm.countFromLinks("B") == 2);
+    assert(dsm.countFromLinks("C") == 1);
+    assert(dsm.countFromLinks("D") == 1);
+    assert(dsm.countFromLinks("E") == 0);
+
+    // Check the number of links to an element
+    assert(dsm.countToLinks("A") == 0);
+    assert(dsm.countToLinks("B") == 1);
+    assert(dsm.countToLinks("C") == 2);
+    assert(dsm.countToLinks("D") == 1);
+    assert(dsm.countToLinks("E") == 2);
+
+    // Check if an element exists
+    assert(dsm.hasElement("A"));
+    assert(dsm.hasElement("B"));
+    assert(dsm.hasElement("C"));
+    assert(dsm.hasElement("D"));
+    assert(dsm.hasElement("E"));
+    assert(!dsm.hasElement("F"));
 }

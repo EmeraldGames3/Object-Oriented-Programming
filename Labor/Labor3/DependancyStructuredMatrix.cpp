@@ -323,29 +323,60 @@ bool DSM<Type>::removeElement(const string &elementName) {
     return true;
 }
 
+/**
+ * @brief Count the total amount of links in the DSM
+ */
 template<typename Type>
 int DSM<Type>::countAllLinks() {
-    return 0;
+    int totalLinks = 0;
+    for (int i = 0; i < elementCount; i++) {
+        for (int j = 0; j < elementCount; j++) {
+            if (matrix[i][j] != 0) {
+                totalLinks++;
+            }
+        }
+    }
+    return totalLinks;
 }
 
+/**
+ * @brief Count all the links from an element to all other elements
+ */
 template<typename Type>
 int DSM<Type>::countFromLinks(string elementName) {
-    return 0;
+    int fromLinks = 0;
+    int index = getIndex(elementName);
+    if (index == -1) {
+        throw std::invalid_argument("Element not found in DSM");
+    }
+    for (int i = 0; i < elementCount; i++) {
+        if (matrix[index][i] != 0) {
+            fromLinks++;
+        }
+    }
+    return fromLinks;
 }
 
+/**
+ * @brief Count the total amount of links to an element from all other elements
+ */
 template<typename Type>
 int DSM<Type>::countToLinks(string elementName) {
-    return 0;
+    int toLinks = 0;
+    int index = getIndex(elementName);
+    if (index == -1) {
+        throw std::invalid_argument("Element not found in DSM");
+    }
+    for (int i = 0; i < elementCount; i++) {
+        if (matrix[i][index] != 0) {
+            toLinks++;
+        }
+    }
+    return toLinks;
 }
 
-template
-class DSM<bool>;
-
-template
-class DSM<int>;
-
-template
-class DSM<float>;
-
-template
-class DSM<double>;
+//Instantiate the templated class to allow the compiler to generate the necessary code
+template class DSM<bool>;
+template class DSM<int>;
+template class DSM<float>;
+template class DSM<double>;
