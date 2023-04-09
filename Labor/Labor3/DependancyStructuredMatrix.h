@@ -13,7 +13,16 @@ private:
     Type **matrix;
     string *elementNames;
 
-public:
+    friend void testConstructors();
+    friend void test_getName();
+    friend void testSetElementName();
+    friend void testResizeElementNames();
+    friend void testResizeMatrix();
+    friend void testGetIndex();
+    friend void testAddLink1();
+    friend void testAddLink2();
+    friend void testAutomaticResize();
+
     //Resize the elementNames array
     void resizeElementNames(int newCapacity);
 
@@ -22,6 +31,14 @@ public:
 
     //Automatically resize the elementNames array and the matrix
     void automaticResize();
+
+    //Get the capacity of the DSM
+    int getCapacity();
+
+    //Add a new Element to elementName
+    int addElementName(string element);
+
+public:
 
     //get the index of an element in elementNames
     int getIndex(const string &str);
@@ -41,17 +58,17 @@ public:
     //Get the size of the matrix
     int size();
 
-    //Get the capacity of the DSM
-    int getCapacity();
-
     //Get the name of an element
     string getName(int index);
 
     //Set the name of an element
     void setElementName(int index, const string& elementName);
 
+    //Remove an element from the DSM
+    bool removeElement(const string &elementName);
+
     //Add a link between two Elements
-    void addLink(const string& fromElement, const string& toElement, Type weight);
+    void addLink(string fromElement, string toElement, Type weight);
 
     //Delete a link between two elements
     void deleteLink(const string& fromElement, const string& toElement);
@@ -65,9 +82,12 @@ public:
     //Check if an element exists in the DSM
     bool hasElement(const string& element);
 
+    //Count the links to an element
     int countToLinks(string elementName);
 
+    //Count the links from an element
     int countFromLinks(string elementName);
 
+    //Count the total links in the DSM
     int countAllLinks();
 };

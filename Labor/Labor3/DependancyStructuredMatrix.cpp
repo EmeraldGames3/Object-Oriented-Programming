@@ -1,3 +1,4 @@
+#include <iostream>
 #include "DependancyStructuredMatrix.h"
 
 /**
@@ -208,44 +209,48 @@ void DSM<Type>::setElementName(int index, const string &elementName) {
 }
 
 /**
- * @brief add a link between two elements if they exist in the DSM or add the elements if they are not in the DSM
+ * @brief Add a new element
+ * @details If the element already exist return its index
+ */
+template<typename Type>
+int DSM<Type>::addElementName(string element) {
+    int index = getIndex(element);
+
+    // If element exists return it's index
+    if (index != -1)
+        return index;
+
+    elementNames[elementCount] = element;
+    elementCount++;
+    automaticResize();
+    return elementCount - 1;
+}
+
+/**
+ * @brief Add a link between two elements if they exist in the DSM or add the elements if they are not in the DSM
  * @details The column is from where the relation comes, and the row is where it goes
  */
 template<typename Type>
-void DSM<Type>::addLink(const string &fromElement, const string &toElement, Type weight) {
-    // Check if fromElement is in the DSM
+void DSM<Type>::addLink(string fromElement, string toElement, Type weight) {
+    // Check if fromElement and toElement is the DSM
+    //If they are not add them
     int fromIndex = getIndex(fromElement);
-
-    // Check if the toElement is in the DSM
     int toIndex = getIndex(toElement);
 
-    // If either element is not in the DSM, resize it if needed
-    bool resized = false;
-    if (fromIndex == -1 || toIndex == -1) {
-        if (elementCount == capacity) {
-            automaticResize();
-            resized = true;
-        }
-    }
-
-    // Add fromElement if it does not exist in DSM
-    if (fromIndex == -1) {
+    if(fromIndex == -1){
         elementNames[elementCount] = fromElement;
         fromIndex = elementCount;
         elementCount++;
+        automaticResize();
     }
 
-    // Add toElement if it does not exist in DSM
-    if (toIndex == -1) {
-        if (!resized && elementCount == capacity) {
-            automaticResize();
-        }
+    if(toIndex == -1){
         elementNames[elementCount] = toElement;
         toIndex = elementCount;
         elementCount++;
+        automaticResize();
     }
 
-    // Add link to matrix
     matrix[fromIndex][toIndex] = weight;
 }
 
@@ -282,6 +287,55 @@ Type DSM<Type>::linkWeight(const string &fromElement, const string &toElement) {
 template<typename Type>
 bool DSM<Type>::hasElement(const string &element) {
     return getIndex(element) != -1;
+}
+
+/**
+ * @brief Remove an element from the DSM
+ * @return True if the element was found and removed, false otherwise
+ */
+template<typename Type>
+bool DSM<Type>::removeElement(const string &elementName) {
+    // Find the index of the element to remove
+    int index = getIndex(elementName);
+    if (index == -1) {
+        // The element was not found
+        return false;
+    }
+
+    // Remove the element from the element names array
+    for (int i = index; i < elementCount - 1; i++) {
+        elementNames[i] = elementNames[i + 1];
+    }
+    elementNames[elementCount - 1] = "";
+    elementCount--;
+
+    // Remove the element's row from the matrix
+    for (int i = 0; i < elementCount; i++) {
+        for (int j = index; j < elementCount - 1; j++) {
+            matrix[i][j] = matrix[i][j + 1];
+        }
+        matrix[i][elementCount - 1] = Type();
+    }
+
+    // Resize the matrix and element names arrays if necessary
+    automaticResize();
+
+    return true;
+}
+
+template<typename Type>
+int DSM<Type>::countAllLinks() {
+    return 0;
+}
+
+template<typename Type>
+int DSM<Type>::countFromLinks(string elementName) {
+    return 0;
+}
+
+template<typename Type>
+int DSM<Type>::countToLinks(string elementName) {
+    return 0;
 }
 
 template
