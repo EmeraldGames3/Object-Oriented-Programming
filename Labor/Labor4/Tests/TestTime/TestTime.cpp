@@ -2,4 +2,6 @@
 
 void testTime(){
     testDay();
+    testDate();
+    testExactDate();
 }

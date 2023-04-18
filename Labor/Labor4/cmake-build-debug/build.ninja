@@ -85,11 +85,23 @@ build CMakeFiles/Labor4.dir/Tests/TestTime/TestTime.cpp.obj: CXX_COMPILER__Labor
   OBJECT_DIR = CMakeFiles\Labor4.dir
   OBJECT_FILE_DIR = CMakeFiles\Labor4.dir\Tests\TestTime
 
-build CMakeFiles/Labor4.dir/Tests/TestTime/TestDay.cpp.obj: CXX_COMPILER__Labor4_Debug D$:/Programming/Object-Oriented-Programming/Labor/Labor4/Tests/TestTime/TestDay.cpp || cmake_object_order_depends_target_Labor4
-  DEP_FILE = CMakeFiles\Labor4.dir\Tests\TestTime\TestDay.cpp.obj.d
+build CMakeFiles/Labor4.dir/Tests/TestTime/TestDay/TestDay.cpp.obj: CXX_COMPILER__Labor4_Debug D$:/Programming/Object-Oriented-Programming/Labor/Labor4/Tests/TestTime/TestDay/TestDay.cpp || cmake_object_order_depends_target_Labor4
+  DEP_FILE = CMakeFiles\Labor4.dir\Tests\TestTime\TestDay\TestDay.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++20
   OBJECT_DIR = CMakeFiles\Labor4.dir
-  OBJECT_FILE_DIR = CMakeFiles\Labor4.dir\Tests\TestTime
+  OBJECT_FILE_DIR = CMakeFiles\Labor4.dir\Tests\TestTime\TestDay
+
+build CMakeFiles/Labor4.dir/Tests/TestTime/TestDate/TestDate.cpp.obj: CXX_COMPILER__Labor4_Debug D$:/Programming/Object-Oriented-Programming/Labor/Labor4/Tests/TestTime/TestDate/TestDate.cpp || cmake_object_order_depends_target_Labor4
+  DEP_FILE = CMakeFiles\Labor4.dir\Tests\TestTime\TestDate\TestDate.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++20
+  OBJECT_DIR = CMakeFiles\Labor4.dir
+  OBJECT_FILE_DIR = CMakeFiles\Labor4.dir\Tests\TestTime\TestDate
+
+build CMakeFiles/Labor4.dir/Tests/TestTime/TestExactDate/TestExactDate.cpp.obj: CXX_COMPILER__Labor4_Debug D$:/Programming/Object-Oriented-Programming/Labor/Labor4/Tests/TestTime/TestExactDate/TestExactDate.cpp || cmake_object_order_depends_target_Labor4
+  DEP_FILE = CMakeFiles\Labor4.dir\Tests\TestTime\TestExactDate\TestExactDate.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++20
+  OBJECT_DIR = CMakeFiles\Labor4.dir
+  OBJECT_FILE_DIR = CMakeFiles\Labor4.dir\Tests\TestTime\TestExactDate
 
 
 # =============================================================================
@@ -99,7 +111,7 @@ build CMakeFiles/Labor4.dir/Tests/TestTime/TestDay.cpp.obj: CXX_COMPILER__Labor4
 #############################################
 # Link the executable Labor4.exe
 
-build Labor4.exe: CXX_EXECUTABLE_LINKER__Labor4_Debug CMakeFiles/Labor4.dir/main.cpp.obj CMakeFiles/Labor4.dir/Domain/Fruit.cpp.obj CMakeFiles/Labor4.dir/Time/Date.cpp.obj CMakeFiles/Labor4.dir/Time/Day.cpp.obj CMakeFiles/Labor4.dir/Time/ExactDate.cpp.obj CMakeFiles/Labor4.dir/Tests/TestTime/TestTime.cpp.obj CMakeFiles/Labor4.dir/Tests/TestTime/TestDay.cpp.obj
+build Labor4.exe: CXX_EXECUTABLE_LINKER__Labor4_Debug CMakeFiles/Labor4.dir/main.cpp.obj CMakeFiles/Labor4.dir/Domain/Fruit.cpp.obj CMakeFiles/Labor4.dir/Time/Date.cpp.obj CMakeFiles/Labor4.dir/Time/Day.cpp.obj CMakeFiles/Labor4.dir/Time/ExactDate.cpp.obj CMakeFiles/Labor4.dir/Tests/TestTime/TestTime.cpp.obj CMakeFiles/Labor4.dir/Tests/TestTime/TestDay/TestDay.cpp.obj CMakeFiles/Labor4.dir/Tests/TestTime/TestDate/TestDate.cpp.obj CMakeFiles/Labor4.dir/Tests/TestTime/TestExactDate/TestExactDate.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Labor4.dir
