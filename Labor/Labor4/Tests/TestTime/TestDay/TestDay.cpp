@@ -23,7 +23,7 @@ void testConstructors() {
     assert(day3.getSecond() == 45);
 }
 
-void testAssignmentOperators() {
+void testAssignmentOperator() {
     // Test assignment operator
     Day day1(8, 15, 20);
     Day day2 = day1;
@@ -126,7 +126,7 @@ void testComparisonOperators() {
 }
 
 void testHourManipulation() {
-    Time::Day day(23, 59, 59);
+    Day day(23, 59, 59);
 
     // Test incrementHour
     day.incrementHour(1);
@@ -181,7 +181,7 @@ void testHourManipulation() {
 }
 
 void testMinuteManipulation() {
-    Time::Day day(23, 59, 59);
+    Day day(23, 59, 59);
 
     // Test incrementMinute
     try {
@@ -223,7 +223,7 @@ void testMinuteManipulation() {
 }
 
 void testSecondManipulation() {
-    Time::Day day(0, 0, 0);
+    Day day(0, 0, 0);
 
     // Test incrementSecond
     day.incrementSecond(1);
@@ -254,16 +254,132 @@ void testSecondManipulation() {
     }
 }
 
+void testDayMultiplicationAndDivision() {
+    Day day(12, 30, 45);
+
+    // Test multiplication with a positive scalar
+    day.multiply(3);
+    assert(day.getHour() == 13);
+    assert(day.getMinute() == 32);
+    assert(day.getSecond() == 15);
+
+    // Test multiplication with a scalar of 0
+    try {
+        day.multiply(0);
+        // Assertion will fail if the exception is not thrown
+        assert(false);
+    } catch (std::invalid_argument& e) {
+        assert(true);
+    }
+
+    // Test multiplication with a negative scalar
+    try {
+        day.multiply(-2);
+        // Assertion will fail if the exception is not thrown
+        assert(false);
+    } catch (std::invalid_argument& e) {
+        assert(true);
+    }
+
+    // Test division with a positive scalar
+    day.divide(2);
+    assert(day.getHour() == 6);
+    assert(day.getMinute() == 16);
+    assert(day.getSecond() == 7);
+
+    // Test division with a scalar of 0
+    try {
+        day.divide(0);
+        // Assertion will fail if the exception is not thrown
+        assert(false);
+    } catch (std::invalid_argument& e) {
+        assert(true);
+    }
+
+    // Test division with a negative scalar
+    try {
+        day.divide(-3);
+        // Assertion will fail if the exception is not thrown
+        assert(false);
+    } catch (std::invalid_argument& e) {
+        assert(true);
+    }
+}
+
 void testDayParametersManipulation(){
     testHourManipulation();
     testMinuteManipulation();
     testSecondManipulation();
+    testDayMultiplicationAndDivision();
+}
+
+void testArithmeticOperators() {
+    // Test addition operator
+    Day d1(2, 30, 45);
+    Day d2(3, 15, 20);
+    Day d3 = d1 + d2;
+    assert(d3.getHour() == 5);
+    assert(d3.getMinute() == 46);
+    assert(d3.getSecond() == 5);
+
+    // Test subtraction operator
+    Day d4(4, 40, 30);
+    Day d5(2, 20, 15);
+    Day d6 = d4 - d5;
+    assert(d6.getHour() == 2);
+    assert(d6.getMinute() == 20);
+    assert(d6.getSecond() == 15);
+
+    // Test multiplication operator
+    Day d7(1, 15, 0);
+    Day d8 = d7 * 3;
+    assert(d8.getHour() == 3);
+    assert(d8.getMinute() == 45);
+    assert(d8.getSecond() == 0);
+
+    // Test division operator
+    Day d9(5, 30, 0);
+    Day d10 = d9 / 2;
+    assert(d10.getHour() == 2);
+    assert(d10.getMinute() == 15);
+    assert(d10.getSecond() == 0);
+}
+
+void testCompoundAssignmentOperators(){
+    Day d1(2, 30, 45);
+    Day d2(1, 10, 20);
+
+    // Test += operator
+    d1 += d2;
+    assert(d1.getHour() == 3);
+    assert(d1.getMinute() == 41);
+    assert(d1.getSecond() == 5);
+
+    // Test -= operator
+    d1 -= d2;
+    assert(d1.getHour() == 2);
+    assert(d1.getMinute() == 30);
+    assert(d1.getSecond() == 45);
+
+    // Test *= operator
+    d1 *= 2;
+    assert(d1.getHour() == 5);
+    assert(d1.getMinute() == 1);
+    assert(d1.getSecond() == 30);
+
+    // Test /= operator
+    d1 /= 2;
+    assert(d1.getHour() == 2);
+    assert(d1.getMinute() == 0);
+    assert(d1.getSecond() == 15);
 }
 
 void testDay(){
     testConstructors();
-    testAssignmentOperators();
+    testAssignmentOperator();
     testGettersAndSetters();
     testComparisonOperators();
     testDayParametersManipulation();
+    testArithmeticOperators();
+    testCompoundAssignmentOperators();
 }

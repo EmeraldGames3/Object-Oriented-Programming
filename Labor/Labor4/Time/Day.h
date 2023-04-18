@@ -43,6 +43,12 @@ namespace Time {
         void decrementMinute(short minutes);
         void decrementSecond(short seconds);
 
+        ///Multiply with a scalar
+        void multiply(short scalar);
+
+        ///Divide with a scalar
+        void divide(short scalar);
+
         ///Overloaded assignment operator
         Day &operator=(const Day &other);
 
@@ -53,5 +59,17 @@ namespace Time {
         bool operator>(const Day &other) const;
         bool operator<=(const Day &other) const;
         bool operator>=(const Day &other) const;
+
+        ///Overloaded arithmetic operators
+        Day operator+(const Day &other) const;
+        Day operator-(const Day &other) const;
+        Day operator*(short scalar) const;
+        Day operator/(short scalar) const;
+
+        ///Overloaded compound assignment operators
+        Day &operator+=(const Day &other);
+        Day &operator-=(const Day &other);
+        Day &operator*=(short scalar);
+        Day &operator/=(short scalar);
     };
 }
