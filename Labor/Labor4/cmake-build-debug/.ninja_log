@@ -1,0 +1,23 @@
+# ninja log v5
+18	133	7035148290187169	CMakeFiles/Labor4.dir/Time/ExactDate.cpp.obj	2b73e3bb2668c338
+461	550	7035192303206538	Labor4.exe	d1edcdb743ccee43
+6	134	7035148290187169	CMakeFiles/Labor4.dir/Time/Date.cpp.obj	ea3fff8ec2af89ef
+8	339	7035175080867676	CMakeFiles/Labor4.dir/Tests/TestTime/TestTime.cpp.obj	e1b01a549d6b83c3
+3	504	7035191585093384	CMakeFiles/Labor4.dir/Time/Day.cpp.obj	9b062bd47e20401
+3	423	7035175081708307	CMakeFiles/Labor4.dir/main.cpp.obj	b249183f1962e571
+4	455	7035148293408422	CMakeFiles/Labor4.dir/Domain/Fruit.cpp.obj	b0d572e5c43291ee
+2	461	7035192302346346	CMakeFiles/Labor4.dir/Tests/TestTime/TestDay.cpp.obj	1f24a023973266d6
+3	475	7035192397001296	CMakeFiles/Labor4.dir/Tests/TestTime/TestDay.cpp.obj	1f24a023973266d6
+475	564	7035192397871483	Labor4.exe	d1edcdb743ccee43
+3	517	7035192639148242	CMakeFiles/Labor4.dir/Tests/TestTime/TestDay.cpp.obj	1f24a023973266d6
+517	611	7035192640068444	Labor4.exe	d1edcdb743ccee43
+3	466	7035192723180228	CMakeFiles/Labor4.dir/Tests/TestTime/TestDay.cpp.obj	1f24a023973266d6
+466	555	7035192724040497	Labor4.exe	d1edcdb743ccee43
+3	469	7035192884492563	CMakeFiles/Labor4.dir/Tests/TestTime/TestDay.cpp.obj	1f24a023973266d6
+470	557	7035192885362754	Labor4.exe	d1edcdb743ccee43
+2	525	7035192986684861	CMakeFiles/Labor4.dir/Tests/TestTime/TestDay.cpp.obj	1f24a023973266d6
+525	619	7035192987605076	Labor4.exe	d1edcdb743ccee43
+2	480	7035193092484096	CMakeFiles/Labor4.dir/Tests/TestTime/TestDay.cpp.obj	1f24a023973266d6
+480	570	7035193093354201	Labor4.exe	d1edcdb743ccee43
+3	522	7035193176055970	CMakeFiles/Labor4.dir/Tests/TestTime/TestDay.cpp.obj	1f24a023973266d6
+522	616	7035193176976221	Labor4.exe	d1edcdb743ccee43
