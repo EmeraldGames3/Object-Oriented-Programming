@@ -3,4 +3,4 @@ project(Labor4)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Labor4 main.cpp Domain/Fruit.cpp Domain/Fruit.h Time/Date.cpp Time/Date.h Time/Day.cpp Time/Day.h Time/ExactDate.cpp Time/ExactDate.h Time/Time.h Tests/TestTime/TestTime.cpp Tests/TestTime/TestTime.h Tests/TestTime/TestDay/TestDay.cpp Tests/TestTime/TestDay/TestDay.h Tests/TestTime/TestDate/TestDate.cpp Tests/TestTime/TestDate/TestDate.h Tests/TestTime/TestExactDate/TestExactDate.cpp Tests/TestTime/TestExactDate/TestExactDate.h)
+add_executable(Labor4 main.cpp Domain/Fruit.cpp Domain/Fruit.h Time/Date.cpp Time/Date.h Time/Day.cpp Time/Day.h Time/ExactDate.cpp Time/ExactDate.h Time/Time.h Tests/TestTime/TestTime.cpp Tests/TestTime/TestTime.h Tests/TestTime/TestDay/TestDay.cpp Tests/TestTime/TestDay/TestDay.h Tests/TestTime/TestDate/TestDate.cpp Tests/TestTime/TestDate/TestDate.h Tests/TestTime/TestExactDate/TestExactDate.cpp Tests/TestTime/TestExactDate/TestExactDate.h Domain/Domain.h)

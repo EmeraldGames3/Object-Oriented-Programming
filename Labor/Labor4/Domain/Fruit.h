@@ -1,49 +1,71 @@
 #pragma once
 
+#include "../Time/Date.h"
 #include <string>
 
-using std::string;
+using std::string, Time::Date;
 
-class Fruit {
-private:
-    string name;
-    string origin;
-    int price;
+namespace Domain {
+    class Fruit {
+    private:
+        string name;
+        string origin;
+        string producer;
+        Date expirationDate;
+        int quantity;
+        int price;
 
-public:
-    ///Default Constructor
-    Fruit();
+    public:
+        ///Default Constructor
+        explicit Fruit(const string &_name, const string &_origin = "Romania", const string &_producer = "Nelu",
+                       const Date &_expirationDate = Date(2024, 1, 1),
+                       int _quantity = 1, int _price = 1);
 
-    ///Copy constructor
-    Fruit(const Fruit &other);
+        ///Copy constructor
+        Fruit(const Fruit &other) = default;
 
-    ///Destructor
-    ~Fruit() = default;
+        ///Destructor
+        ~Fruit() = default;
 
-    ///Name getter
-    string getName();
+        ///Getters
+        string getName();
 
-    ///Origin getter
-    string getOrigin();
+        string getOrigin();
 
-    ///Price getter
-    [[nodiscard]] int getPrice() const;
+        string getProducer();
 
-    ///Price setter
-    void setPrice(int newPrice);
+        Date getExpirationDate();
 
-    ///Overloaded operators
-    Fruit &operator=(const Fruit &other);
+        [[nodiscard]] int getQuantity() const;
 
-    bool operator==(const Fruit &other) const;
+        [[nodiscard]] int getPrice() const;
 
-    bool operator!=(const Fruit &other) const;
+        ///Setters
+        void setName(const string &newName);
 
-    bool operator<(const Fruit &other) const;
+        void setOrigin(const string &newOrigin);
 
-    bool operator>(const Fruit &other) const;
+        void setProducer(const string &newProducer);
 
-    bool operator<=(const Fruit &other) const;
+        void setExpirationDate(const Date &newExpirationDate);
 
-    bool operator>=(const Fruit &other) const;
-};
+        void setQuantity(int newQuantity);
+
+        void setPrice(int newPrice);
+
+        ///Overloaded operators
+        Fruit &operator=(const Fruit &other);
+
+        bool operator==(const Fruit &other) const;
+
+        bool operator!=(const Fruit &other) const;
+
+        bool operator<(const Fruit &other) const;
+
+        bool operator>(const Fruit &other) const;
+
+        bool operator<=(const Fruit &other) const;
+
+        bool operator>=(const Fruit &other) const;
+    };
+}
