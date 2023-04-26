@@ -1,6 +1,9 @@
-#include <iostream>
-#include "Tests/TestTime/TestTime.h"
+#include "Tests/TestAll.h"
+#include "UI/UI.h"
+
+using namespace UI;
 
 int main() {
-    testTime();
+    testAll();
+    UserInterface::run();
 }

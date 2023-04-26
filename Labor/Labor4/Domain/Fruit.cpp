@@ -1,21 +1,19 @@
 #include "Fruit.h"
 
+#include <utility>
+
 using Domain::Fruit;
 
-#pragma GCC diagnostic ignored "-Wpessimizing-move"
-//Disable warning
-
 ///Default constructor
-Fruit::Fruit(const string &_name, const string &_origin, const string &_producer, const Date &_expirationDate,
-             int _quantity, int _price) : name{_name},
-                                          origin{_origin},
-                                          producer{_producer},
+///@warning The strings given to this constructor are moved to another address in memory
+///It is unsafe to access them after this constructor has been called
+Fruit::Fruit(string _name, string _origin, string _producer, const Date &_expirationDate,
+             int _quantity, int _price) : name{std::move(_name)},
+                                          origin{std::move(_origin)},
+                                          producer{std::move(_producer)},
                                           expirationDate(_expirationDate),
                                           quantity{_quantity},
                                           price{_price} {}
-
-#pragma GCC diagnostic warning "-Wpessimizing-move"
-//Reenable warning
 
 ///Name getter
 string Fruit::getName() {
@@ -75,4 +73,28 @@ void Fruit::setQuantity(int newQuantity) {
 ///Price setter
 void Fruit::setPrice(int newPrice) {
     price = newPrice;
+}
+
+bool Domain::Fruit::operator==(const Fruit& other) const {
+    return (name == other.name) && (producer == other.producer);
+}
+
+bool Domain::Fruit::operator!=(const Fruit& other) const {
+    return !(*this == other);
+}
+
+bool Domain::Fruit::operator<(const Fruit& other) const {
+    return expirationDate < other.expirationDate;
+}
+
+bool Domain::Fruit::operator>(const Fruit& other) const {
+    return expirationDate > other.expirationDate;
+}
+
+bool Domain::Fruit::operator<=(const Fruit& other) const {
+    return (*this < other) || (*this == other);
+}
+
+bool Fruit::operator>=(const Fruit &other) const {
+    return (*this > other) || (*this == other);
 }

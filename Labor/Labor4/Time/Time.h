@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Date.h"
-#include "Day.h"
-#include "ExactDate.h"
+#include "Date/Date.h"
+#include "Day/Day.h"
+#include "ExactDate/ExactDate.h"
 
 namespace Time {
     class Date;
