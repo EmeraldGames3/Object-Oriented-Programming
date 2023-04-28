@@ -16,17 +16,17 @@ Fruit::Fruit(string _name, string _origin, string _producer, const Date &_expira
                                           price{_price} {}
 
 ///Name getter
-string Fruit::getName() {
+string Fruit::getName() const {
     return name;
 }
 
 ///Origin getter
-string Fruit::getOrigin() {
+string Fruit::getOrigin() const {
     return origin;
 }
 
 ///Get producer
-string Fruit::getProducer() {
+string Fruit::getProducer() const {
     return producer;
 }
 
@@ -36,7 +36,7 @@ int Fruit::getPrice() const {
 }
 
 ///ExpirationDate getter
-Date Fruit::getExpirationDate() {
+Date Fruit::getExpirationDate() const {
     return expirationDate;
 }
 

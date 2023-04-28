@@ -28,10 +28,10 @@ namespace Domain {
         ~Fruit() = default;
 
         ///Getters
-        string getName();
-        string getOrigin();
-        string getProducer();
-        Date getExpirationDate();
+        string getName() const;
+        string getOrigin() const;
+        string getProducer() const;
+        Date getExpirationDate() const;
         [[nodiscard]] int getQuantity() const;
         [[nodiscard]] int getPrice() const;
 

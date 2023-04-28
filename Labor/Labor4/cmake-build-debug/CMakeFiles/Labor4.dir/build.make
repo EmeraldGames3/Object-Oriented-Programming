@@ -237,6 +237,34 @@ CMakeFiles/Labor4.dir/UI/UserInterface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Labor4.dir/UI/UserInterface.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/UI/UserInterface.cpp" -o CMakeFiles/Labor4.dir/UI/UserInterface.cpp.s
 
+CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.o: CMakeFiles/Labor4.dir/flags.make
+CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.o: /home/bogdan/Programming/Uni/Object\ Oriented\ Programming/Labor/Labor4/Repository/FruitRepository.cpp
+CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.o: CMakeFiles/Labor4.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.o -MF CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.o.d -o CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.o -c "/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Repository/FruitRepository.cpp"
+
+CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Repository/FruitRepository.cpp" > CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.i
+
+CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Repository/FruitRepository.cpp" -o CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.s
+
+CMakeFiles/Labor4.dir/Controller/FruitController.cpp.o: CMakeFiles/Labor4.dir/flags.make
+CMakeFiles/Labor4.dir/Controller/FruitController.cpp.o: /home/bogdan/Programming/Uni/Object\ Oriented\ Programming/Labor/Labor4/Controller/FruitController.cpp
+CMakeFiles/Labor4.dir/Controller/FruitController.cpp.o: CMakeFiles/Labor4.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Labor4.dir/Controller/FruitController.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Labor4.dir/Controller/FruitController.cpp.o -MF CMakeFiles/Labor4.dir/Controller/FruitController.cpp.o.d -o CMakeFiles/Labor4.dir/Controller/FruitController.cpp.o -c "/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Controller/FruitController.cpp"
+
+CMakeFiles/Labor4.dir/Controller/FruitController.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Labor4.dir/Controller/FruitController.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Controller/FruitController.cpp" > CMakeFiles/Labor4.dir/Controller/FruitController.cpp.i
+
+CMakeFiles/Labor4.dir/Controller/FruitController.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Labor4.dir/Controller/FruitController.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Controller/FruitController.cpp" -o CMakeFiles/Labor4.dir/Controller/FruitController.cpp.s
+
 # Object files for target Labor4
 Labor4_OBJECTS = \
 "CMakeFiles/Labor4.dir/main.cpp.o" \
@@ -250,7 +278,9 @@ Labor4_OBJECTS = \
 "CMakeFiles/Labor4.dir/Tests/TestTime/TestExactDate/TestExactDate.cpp.o" \
 "CMakeFiles/Labor4.dir/Tests/TestDomain/TestDomain.cpp.o" \
 "CMakeFiles/Labor4.dir/Tests/TestAll.cpp.o" \
-"CMakeFiles/Labor4.dir/UI/UserInterface.cpp.o"
+"CMakeFiles/Labor4.dir/UI/UserInterface.cpp.o" \
+"CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.o" \
+"CMakeFiles/Labor4.dir/Controller/FruitController.cpp.o"
 
 # External object files for target Labor4
 Labor4_EXTERNAL_OBJECTS =
@@ -267,9 +297,11 @@ Labor4: CMakeFiles/Labor4.dir/Tests/TestTime/TestExactDate/TestExactDate.cpp.o
 Labor4: CMakeFiles/Labor4.dir/Tests/TestDomain/TestDomain.cpp.o
 Labor4: CMakeFiles/Labor4.dir/Tests/TestAll.cpp.o
 Labor4: CMakeFiles/Labor4.dir/UI/UserInterface.cpp.o
+Labor4: CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.o
+Labor4: CMakeFiles/Labor4.dir/Controller/FruitController.cpp.o
 Labor4: CMakeFiles/Labor4.dir/build.make
 Labor4: CMakeFiles/Labor4.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable Labor4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable Labor4"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Labor4.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

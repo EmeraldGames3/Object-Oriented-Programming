@@ -63,7 +63,9 @@
 				16,
 				19,
 				21,
-				24
+				24,
+				27,
+				29
 			]
 		}
 	],
@@ -107,7 +109,9 @@
 				16,
 				19,
 				21,
-				24
+				24,
+				27,
+				29
 			]
 		},
 		{
@@ -127,7 +131,11 @@
 				20,
 				22,
 				23,
-				25
+				25,
+				26,
+				28,
+				30,
+				31
 			]
 		}
 	],
@@ -273,6 +281,38 @@
 		{
 			"backtrace" : 1,
 			"path" : "UI/UserInterface.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Repository/Repository.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Repository/FruitRepository.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Repository/FruitRepository.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Controller/FruitController.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Controller/FruitController.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Controller/Controller.h",
 			"sourceGroupIndex" : 1
 		}
 	],

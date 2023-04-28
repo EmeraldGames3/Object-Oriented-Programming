@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Controller/FruitController.cpp" "CMakeFiles/Labor4.dir/Controller/FruitController.cpp.o" "gcc" "CMakeFiles/Labor4.dir/Controller/FruitController.cpp.o.d"
   "/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Domain/Fruit.cpp" "CMakeFiles/Labor4.dir/Domain/Fruit.cpp.o" "gcc" "CMakeFiles/Labor4.dir/Domain/Fruit.cpp.o.d"
+  "/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Repository/FruitRepository.cpp" "CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.o" "gcc" "CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.o.d"
   "/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Tests/TestAll.cpp" "CMakeFiles/Labor4.dir/Tests/TestAll.cpp.o" "gcc" "CMakeFiles/Labor4.dir/Tests/TestAll.cpp.o.d"
   "/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Tests/TestDomain/TestDomain.cpp" "CMakeFiles/Labor4.dir/Tests/TestDomain/TestDomain.cpp.o" "gcc" "CMakeFiles/Labor4.dir/Tests/TestDomain/TestDomain.cpp.o.d"
   "/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Tests/TestTime/TestDate/TestDate.cpp" "CMakeFiles/Labor4.dir/Tests/TestTime/TestDate/TestDate.cpp.o" "gcc" "CMakeFiles/Labor4.dir/Tests/TestTime/TestDate/TestDate.cpp.o.d"

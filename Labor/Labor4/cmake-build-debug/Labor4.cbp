@@ -82,6 +82,15 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Controller/Controller.h">
+			<Option target="Labor4"/>
+		</Unit>
+		<Unit filename="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Controller/FruitController.cpp">
+			<Option target="Labor4"/>
+		</Unit>
+		<Unit filename="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Controller/FruitController.h">
+			<Option target="Labor4"/>
+		</Unit>
 		<Unit filename="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Domain/Domain.h">
 			<Option target="Labor4"/>
 		</Unit>
@@ -89,6 +98,15 @@
 			<Option target="Labor4"/>
 		</Unit>
 		<Unit filename="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Domain/Fruit.h">
+			<Option target="Labor4"/>
+		</Unit>
+		<Unit filename="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Repository/FruitRepository.cpp">
+			<Option target="Labor4"/>
+		</Unit>
+		<Unit filename="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Repository/FruitRepository.h">
+			<Option target="Labor4"/>
+		</Unit>
+		<Unit filename="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Repository/Repository.h">
 			<Option target="Labor4"/>
 		</Unit>
 		<Unit filename="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Tests/TestAll.cpp">

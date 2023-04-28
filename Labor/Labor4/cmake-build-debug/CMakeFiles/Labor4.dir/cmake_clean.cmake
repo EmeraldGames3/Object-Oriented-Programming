@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Labor4.dir/Controller/FruitController.cpp.o"
+  "CMakeFiles/Labor4.dir/Controller/FruitController.cpp.o.d"
   "CMakeFiles/Labor4.dir/Domain/Fruit.cpp.o"
   "CMakeFiles/Labor4.dir/Domain/Fruit.cpp.o.d"
+  "CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.o"
+  "CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.o.d"
   "CMakeFiles/Labor4.dir/Tests/TestAll.cpp.o"
   "CMakeFiles/Labor4.dir/Tests/TestAll.cpp.o.d"
   "CMakeFiles/Labor4.dir/Tests/TestDomain/TestDomain.cpp.o"

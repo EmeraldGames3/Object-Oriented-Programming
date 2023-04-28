@@ -21,16 +21,12 @@ namespace Time {
 
         ///Getters
         [[nodiscard]] int getYear() const;
-
         [[nodiscard]] int getMonth() const;
-
         [[nodiscard]] Day getDay() const;
 
         ///Setters
         void setYear(int newYear);
-
         void setMonth(int newMonth);
-
         void setDay(Day newDay);
     };
 }

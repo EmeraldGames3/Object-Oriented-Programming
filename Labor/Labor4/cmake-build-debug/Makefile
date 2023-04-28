@@ -129,6 +129,30 @@ Labor4/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/build
 .PHONY : Labor4/fast
 
+Controller/FruitController.o: Controller/FruitController.cpp.o
+.PHONY : Controller/FruitController.o
+
+# target to build an object file
+Controller/FruitController.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/Controller/FruitController.cpp.o
+.PHONY : Controller/FruitController.cpp.o
+
+Controller/FruitController.i: Controller/FruitController.cpp.i
+.PHONY : Controller/FruitController.i
+
+# target to preprocess a source file
+Controller/FruitController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/Controller/FruitController.cpp.i
+.PHONY : Controller/FruitController.cpp.i
+
+Controller/FruitController.s: Controller/FruitController.cpp.s
+.PHONY : Controller/FruitController.s
+
+# target to generate assembly for a file
+Controller/FruitController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/Controller/FruitController.cpp.s
+.PHONY : Controller/FruitController.cpp.s
+
 Domain/Fruit.o: Domain/Fruit.cpp.o
 .PHONY : Domain/Fruit.o
 
@@ -152,6 +176,30 @@ Domain/Fruit.s: Domain/Fruit.cpp.s
 Domain/Fruit.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/Domain/Fruit.cpp.s
 .PHONY : Domain/Fruit.cpp.s
+
+Repository/FruitRepository.o: Repository/FruitRepository.cpp.o
+.PHONY : Repository/FruitRepository.o
+
+# target to build an object file
+Repository/FruitRepository.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.o
+.PHONY : Repository/FruitRepository.cpp.o
+
+Repository/FruitRepository.i: Repository/FruitRepository.cpp.i
+.PHONY : Repository/FruitRepository.i
+
+# target to preprocess a source file
+Repository/FruitRepository.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.i
+.PHONY : Repository/FruitRepository.cpp.i
+
+Repository/FruitRepository.s: Repository/FruitRepository.cpp.s
+.PHONY : Repository/FruitRepository.s
+
+# target to generate assembly for a file
+Repository/FruitRepository.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.s
+.PHONY : Repository/FruitRepository.cpp.s
 
 Tests/TestAll.o: Tests/TestAll.cpp.o
 .PHONY : Tests/TestAll.o
@@ -426,9 +474,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Labor4"
+	@echo "... Controller/FruitController.o"
+	@echo "... Controller/FruitController.i"
+	@echo "... Controller/FruitController.s"
 	@echo "... Domain/Fruit.o"
 	@echo "... Domain/Fruit.i"
 	@echo "... Domain/Fruit.s"
+	@echo "... Repository/FruitRepository.o"
+	@echo "... Repository/FruitRepository.i"
+	@echo "... Repository/FruitRepository.s"
 	@echo "... Tests/TestAll.o"
 	@echo "... Tests/TestAll.i"
 	@echo "... Tests/TestAll.s"

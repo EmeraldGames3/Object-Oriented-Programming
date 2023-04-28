@@ -142,7 +142,7 @@ void UI::UserInterface::removeProduct() {
     std::cin >> origin;
 
     try {
-
+        // TODO implement
         std::cout << "Product removed successfully." << std::endl;
     }
     catch (std::exception &e) {
