@@ -10,25 +10,27 @@ namespace Time {
         int day;
 
     public:
-        //Default Constructor
+        ///Default Constructor
         explicit Date(int _year = 0, int _month = 0, int _day = 0);
 
-        //Copy constructor
+        ///Copy constructor
         Date(const Date &other) = default;
 
-        //Destructor
+        ///Destructor
         ~Date() = default;
 
         ///Getters
         [[nodiscard]] int getYear() const;
         [[nodiscard]] int getMonth() const;
         [[nodiscard]] int getDay() const;
+        [[nodiscard]] std::string getDateAsFormatedString() const;
 
         ///Setters
         void setYear(int newYear);
         void setMonth(int newMonth);
         void setDay(int newDay);
 
+        ///Compute the number of days in a month
         static int daysInMonth(int year, int month);
 
         ///Overloaded operators

@@ -8,7 +8,7 @@ using Domain::Fruit;
 ///@warning The strings given to this constructor are moved to another address in memory
 ///It is unsafe to access them after this constructor has been called
 Fruit::Fruit(string _name, string _origin, string _producer, const Date &_expirationDate,
-             int _quantity, int _price) : name{std::move(_name)},
+             int _quantity, float _price) : name{std::move(_name)},
                                           origin{std::move(_origin)},
                                           producer{std::move(_producer)},
                                           expirationDate(_expirationDate),
@@ -31,7 +31,7 @@ string Fruit::getProducer() const {
 }
 
 ///Price getter
-int Fruit::getPrice() const {
+float Fruit::getPrice() const {
     return price;
 }
 
@@ -43,6 +43,17 @@ Date Fruit::getExpirationDate() const {
 ///Quantity getter
 int Fruit::getQuantity() const {
     return quantity;
+}
+
+///Get the fruit as string
+std::string Domain::Fruit::getFruitAsFormattedString() {
+    //Format the price to 2 decimal points
+    std::ostringstream stream;
+    stream << std::fixed << std::setprecision(2) << price;
+    std::string formattedPrice = stream.str();
+
+    return name + ',' + origin + ',' + producer + ',' + expirationDate.getDateAsFormatedString() + ',' +
+           std::to_string(quantity) + ',' + formattedPrice;
 }
 
 ///Name setter
@@ -98,3 +109,15 @@ bool Domain::Fruit::operator<=(const Fruit& other) const {
 bool Fruit::operator>=(const Fruit &other) const {
     return (*this > other) || (*this == other);
 }
+
+std::ostream &Domain::operator<<(std::ostream &os, const Fruit &fruit) {
+    os << "Name: " + fruit.name + "\n";
+    os << "Origin: " + fruit.origin + "\n";
+    os << "Producer: " + fruit.producer + "\n";
+    os << "Expiration Date: " + fruit.expirationDate.getDateAsFormatedString() + "\n";
+    os << "Quantity: " + std::to_string(fruit.quantity) + "\n";
+    os << "Price: " + std::to_string(fruit.price) + "\n";
+    return os;
+}
+
+

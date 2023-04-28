@@ -33,6 +33,10 @@ int Time::Date::getDay() const {
     return day;
 }
 
+std::string Time::Date::getDateAsFormatedString() const {
+    return std::to_string(year) + '-' + std::to_string(month) + '-' + std::to_string(day);
+}
+
 void Time::Date::setYear(int newYear) {
     if (newYear >= 0)
         year = newYear;
