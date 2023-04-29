@@ -4,4 +4,5 @@ void testAll(){
     testTime();
     testDomain();
     testRepository();
+    testController();
 }

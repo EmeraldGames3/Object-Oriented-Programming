@@ -10,7 +10,6 @@ Repository::FruitRepository::FruitRepository(string _fileName) : fileName(std::m
     data = std::make_shared<vector<Fruit>>();
 
     string line;
-
     while (std::getline(file, line)) {
         Fruit fruit = convertFromString(line);
         data->push_back(fruit);
@@ -23,7 +22,6 @@ void Repository::FruitRepository::writeToDataBase() {
     std::ofstream file(fileName, std::ios::trunc);
 
     string fileData{};
-
     for (auto it = data->begin(); it != data->end(); ++it) {
         fileData += (it->getFruitAsFormattedString());
         if (it != data->end() - 1) {

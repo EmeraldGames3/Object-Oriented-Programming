@@ -6,11 +6,12 @@
 #include <memory>
 #include <vector>
 #include <string>
+#include <algorithm>
 
-using Domain::Fruit, Repository::FruitRepository, Time::Date, std::vector, std::shared_ptr, std::string;
+using Domain::Fruit, Repository::FruitRepository, Time::Date, std::vector, std::shared_ptr, std::string, std::unique_ptr;
 
-namespace Controller{
-    class FruitController{
+namespace Controller {
+    class FruitController {
     private:
         FruitRepository fruitRepository;
         shared_ptr<vector<Fruit>> fruits;
@@ -27,5 +28,13 @@ namespace Controller{
 
         ///Destructor
         ~FruitController() = default;
+
+        ///Data Manipulation
+        void addFruit(const string &name, const string &origin, const string &producer, const Time::Date &expiryDate,
+                      int quantity, float price);
+
+        void deleteFruit(const string &name, const string &origin);
+        unique_ptr<vector<Fruit>> getAllFruits();
+        unique_ptr<vector<Fruit>> findFruits(const string &searchString);
     };
 }

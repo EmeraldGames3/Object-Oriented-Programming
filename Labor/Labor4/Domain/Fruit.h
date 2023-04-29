@@ -44,7 +44,7 @@ namespace Domain {
         void setProducer(const string &newProducer);
         void setExpirationDate(const Date &newExpirationDate);
         void setQuantity(int newQuantity);
-        void setPrice(int newPrice);
+        void setPrice(float newPrice);
 
         ///Overloaded operators
         Fruit &operator=(const Fruit &other) = default;

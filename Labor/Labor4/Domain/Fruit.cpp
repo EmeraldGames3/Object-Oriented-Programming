@@ -82,12 +82,12 @@ void Fruit::setQuantity(int newQuantity) {
 }
 
 ///Price setter
-void Fruit::setPrice(int newPrice) {
+void Fruit::setPrice(float newPrice) {
     price = newPrice;
 }
 
 bool Domain::Fruit::operator==(const Fruit& other) const {
-    return (name == other.name) && (producer == other.producer);
+    return (name == other.name) && (origin == other.origin);
 }
 
 bool Domain::Fruit::operator!=(const Fruit& other) const {
