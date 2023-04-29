@@ -17,7 +17,7 @@ namespace Controller{
 
     public:
         ///Constructor
-        explicit FruitController(const string &fileName);
+        explicit FruitController(const string &fileName = "Repository/Data/DataBase");
 
         ///Copy constructor
         FruitController(const FruitController &fruitController) = default;
