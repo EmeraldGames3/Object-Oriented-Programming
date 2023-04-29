@@ -7,7 +7,7 @@ Repository::FruitRepository::FruitRepository(const string &_dataBase) : dataBase
         throw std::runtime_error("Failed to create database file: " + dataBase);
     }
 
-    data = std::make_shared<vector<Fruit>>();
+    data = std::make_shared<list<Fruit>>();
 
     string line;
     std::getline(file, line); //Discard the first line
@@ -21,7 +21,8 @@ Repository::FruitRepository::FruitRepository(const string &_dataBase) : dataBase
 Domain::Fruit Repository::FruitRepository::convertFromString(const string &fruit) {
     std::stringstream ss(fruit);
     string name, origin, producer, expDateStr;
-    int quantity, price;
+    int quantity;
+    float price;
     char delim;
 
     std::getline(ss, name, ',');
@@ -50,6 +51,6 @@ void Repository::FruitRepository::deleteFruit(const Fruit &fruit) {
     }
 }
 
-shared_ptr<vector<Fruit>> Repository::FruitRepository::getAll() {
+shared_ptr<list<Fruit>> Repository::FruitRepository::getAll() {
     return data;
 }

@@ -96,3 +96,10 @@
 698	860	7043856770532040	Labor4.exe	5fa5f6ea58bb13b3
 4	644	7043857718460148	CMakeFiles/Labor4.dir/Tests/TestDomain/TestDomain.cpp.obj	47f2b2fd06cacc96
 645	790	7043857719880476	Labor4.exe	5fa5f6ea58bb13b3
+17	605	7044600393896604	CMakeFiles/Labor4.dir/Tests/TestAll.cpp.obj	e42490383eb8f81
+11	666	7044600394506741	CMakeFiles/Labor4.dir/UI/UserInterface.cpp.obj	6d77701dcdec43c1
+14	720	7044600395046672	CMakeFiles/Labor4.dir/Tests/TestDomain/TestDomain.cpp.obj	47f2b2fd06cacc96
+8	724	7044600395076694	CMakeFiles/Labor4.dir/Domain/Fruit.cpp.obj	b0d572e5c43291ee
+4	767	7044600395516747	CMakeFiles/Labor4.dir/main.cpp.obj	b249183f1962e571
+20	951	7044600397338866	CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.obj	a96307024ebb1150
+951	1103	7044600398834078	Labor4.exe	5fa5f6ea58bb13b3
