@@ -10,7 +10,6 @@ Repository::FruitRepository::FruitRepository(const string &_dataBase) : dataBase
     data = std::make_shared<list<Fruit>>();
 
     string line;
-    std::getline(file, line); //Discard the first line
 
     while (std::getline(file, line)) {
         Fruit fruit = convertFromString(line);
