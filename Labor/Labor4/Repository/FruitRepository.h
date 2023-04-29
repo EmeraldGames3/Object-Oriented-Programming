@@ -4,20 +4,20 @@
 #include <fstream>
 #include <sstream>
 #include <memory>
-#include <list>
+#include <vector>
 #include "../Domain/Domain.h"
 
-using std::string, std::shared_ptr, std::list, Domain::Fruit;
+using std::string, std::shared_ptr, std::vector, Domain::Fruit;
 
 namespace Repository{
     class FruitRepository{
     private:
-        string dataBase;
-        shared_ptr<list<Fruit>> data;
+        string fileName{};
+        shared_ptr<vector<Fruit>> data{};
 
     public:
         ///Constructor
-        explicit FruitRepository(const string &_dataBase);
+        explicit FruitRepository(const string &_fileName = "Repository/Data/DataBase");
 
         ///Copy constructor
         FruitRepository(const FruitRepository &fruitRepository) = default;
@@ -31,14 +31,14 @@ namespace Repository{
         ///Data interactions
         void addFruit(const Fruit &fruit);
         void deleteFruit(const Fruit &fruit);
-        shared_ptr<list<Fruit>> getAll();
+        void deleteData();
+        shared_ptr<vector<Fruit>> getAll();
 
         ///Update the DataBase
         void writeToDataBase();
 
-    private:
         ///Convert the data to a string
-        static string convertToString(Fruit fruit);
+        static string convertToString(Fruit &fruit);
 
         ///Convert a Fruit to a string
         static Fruit convertFromString(const string &fruit);

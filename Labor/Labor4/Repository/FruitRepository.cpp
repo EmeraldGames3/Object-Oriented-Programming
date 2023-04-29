@@ -1,13 +1,13 @@
 #include "FruitRepository.h"
 
-Repository::FruitRepository::FruitRepository(const string &_dataBase) : dataBase(_dataBase){
-    std::ifstream file(dataBase);
+Repository::FruitRepository::FruitRepository(const string &_fileName) : fileName(_fileName) {
+    std::ifstream file(_fileName);
 
     if (!file.is_open()) {
-        throw std::runtime_error("Failed to create database file: " + dataBase);
+        throw std::runtime_error("Failed to create database file: " + fileName);
     }
 
-    data = std::make_shared<list<Fruit>>();
+    data = std::make_shared<vector<Fruit>>();
 
     string line;
 
@@ -15,6 +15,45 @@ Repository::FruitRepository::FruitRepository(const string &_dataBase) : dataBase
         Fruit fruit = convertFromString(line);
         data->push_back(fruit);
     }
+
+    file.close();
+}
+
+void Repository::FruitRepository::writeToDataBase() {
+    std::ofstream file(fileName, std::ios::trunc);
+
+    string fileData{};
+
+    for (auto it = data->begin(); it != data->end(); ++it) {
+        fileData += (it->getFruitAsFormattedString());
+        if (it != data->end() - 1) {
+            fileData += '\n';
+        }
+    }
+
+    file << fileData;
+
+    file.close();
+}
+
+
+void Repository::FruitRepository::addFruit(const Fruit &fruit) {
+    data->push_back(fruit);
+}
+
+void Repository::FruitRepository::deleteFruit(const Fruit &fruit) {
+    auto it = std::find(data->begin(), data->end(), fruit);
+    if (it != data->end()) {
+        data->erase(it);
+    }
+}
+
+shared_ptr<vector<Fruit>> Repository::FruitRepository::getAll() {
+    return data;
+}
+
+void Repository::FruitRepository::deleteData() {
+    data = std::make_unique<vector<Fruit>>();
 }
 
 Domain::Fruit Repository::FruitRepository::convertFromString(const string &fruit) {
@@ -39,17 +78,6 @@ Domain::Fruit Repository::FruitRepository::convertFromString(const string &fruit
     return Domain::Fruit(name, origin, producer, expirationDate, quantity, price);
 }
 
-void Repository::FruitRepository::addFruit(const Fruit &fruit) {
-    data->push_back(fruit);
-}
-
-void Repository::FruitRepository::deleteFruit(const Fruit &fruit) {
-    auto it = std::find(data->begin(), data->end(), fruit);
-    if (it != data->end()) {
-        data->erase(it);
-    }
-}
-
-shared_ptr<list<Fruit>> Repository::FruitRepository::getAll() {
-    return data;
+string Repository::FruitRepository::convertToString(Fruit &fruit) {
+    return fruit.getFruitAsFormattedString();
 }

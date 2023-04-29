@@ -3,4 +3,5 @@
 void testAll(){
     testTime();
     testDomain();
+    testRepository();
 }
