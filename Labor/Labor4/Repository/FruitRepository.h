@@ -5,6 +5,7 @@
 #include <sstream>
 #include <memory>
 #include <vector>
+#include <utility>
 #include "../Domain/Domain.h"
 
 using std::string, std::shared_ptr, std::vector, Domain::Fruit;
@@ -17,7 +18,7 @@ namespace Repository{
 
     public:
         ///Constructor
-        explicit FruitRepository(const string &_fileName = "Repository/Data/DataBase");
+        explicit FruitRepository(string _fileName = "Repository/Data/DataBase");
 
         ///Copy constructor
         FruitRepository(const FruitRepository &fruitRepository) = default;

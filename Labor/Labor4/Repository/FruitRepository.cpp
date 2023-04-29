@@ -1,7 +1,7 @@
 #include "FruitRepository.h"
 
-Repository::FruitRepository::FruitRepository(const string &_fileName) : fileName(_fileName) {
-    std::ifstream file(_fileName);
+Repository::FruitRepository::FruitRepository(string _fileName) : fileName(std::move(_fileName)) {
+    std::ifstream file(fileName);
 
     if (!file.is_open()) {
         throw std::runtime_error("Failed to create database file: " + fileName);

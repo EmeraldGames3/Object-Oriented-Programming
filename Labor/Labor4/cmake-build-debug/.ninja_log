@@ -56,3 +56,7 @@
 715	871	7044638611109873	Labor4.exe	fc4ec4f00b0dc091
 4	729	7044638843414652	CMakeFiles/Labor4.dir/Tests/TestRepository/TestRepository.cpp.obj	e3187cbcfa9d4062
 729	887	7044638844970271	Labor4.exe	fc4ec4f00b0dc091
+4	812	7044645001990855	CMakeFiles/Labor4.dir/main.cpp.obj	b249183f1962e571
+10	815	7044645001840821	CMakeFiles/Labor4.dir/Tests/TestAll.cpp.obj	e42490383eb8f81
+25	994	7044645003851901	CMakeFiles/Labor4.dir/Tests/TestRepository/TestRepository.cpp.obj	e3187cbcfa9d4062
+21	1103	7044645004944244	CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.obj	a96307024ebb1150
