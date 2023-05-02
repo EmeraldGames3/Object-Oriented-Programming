@@ -13,8 +13,8 @@ using Domain::Fruit, Repository::FruitRepository, Time::Date, std::vector, std::
 namespace Controller {
     class FruitController {
     private:
-        FruitRepository fruitRepository;
-        shared_ptr<vector<Fruit>> fruits;
+        FruitRepository fruitRepository; // an instance of fruit repository
+        shared_ptr<vector<Fruit>> fruits; // all the fruits in the programme
 
     public:
         ///Constructor
@@ -35,6 +35,8 @@ namespace Controller {
         void deleteFruit(const string &name, const string &origin);
         void saveData();
         unique_ptr<vector<Fruit>> getAllFruits();
+        unique_ptr<vector<Fruit>> getFruitsByExpirationDate();
+        unique_ptr<vector<Fruit>> getLowQuantityFruits(int quantityThreshold);
         unique_ptr<vector<Fruit>> findFruits(const string &searchString);
     };
 }

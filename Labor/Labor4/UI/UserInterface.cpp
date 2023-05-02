@@ -3,6 +3,7 @@
 
 using std::cin, std::cout;
 
+///Run the programme
 void UI::UserInterface::run() {
     int choice;
     do {
@@ -36,6 +37,7 @@ void UI::UserInterface::run() {
     } while (choice != 0);
 }
 
+///Display the menu
 void UI::UserInterface::displayMenu() {
     cout << "\nFruit Store Management System\n\n"
          << "1. Add a product\n"
@@ -47,6 +49,7 @@ void UI::UserInterface::displayMenu() {
          << "Enter your choice: ";
 }
 
+///Add a user given product to the Data Base
 void UI::UserInterface::addProduct() {
     std::string input;
     std::string name, origin, producer;
@@ -95,14 +98,15 @@ void UI::UserInterface::addProduct() {
     }
 }
 
+///Remove a user given product from the data Base
 void UI::UserInterface::removeProduct() {
     std::string name, origin;
 
     std::cout << "Enter product name: ";
-    std::cin >> name;
+    std::getline(std::cin, name);
 
     std::cout << "Enter product origin: ";
-    std::cin >> origin;
+    std::getline(std::cin, origin);
 
     try {
         controller.deleteFruit(name, origin);
@@ -113,20 +117,29 @@ void UI::UserInterface::removeProduct() {
     }
 }
 
+///Get a string from the user
+///Use that string as a search query and display the result on the screen
 void UI::UserInterface::displayProductsByString() {
     std::string query;
 
     std::cout << "Enter search query: ";
-    std::cin >> query;
+    std::getline(std::cin, query);
 
     try {
-
+        auto fruits = controller.findFruits(query);
+        std::cout << "Products: " << std::endl;
+        for (const auto &fruit: *fruits) {
+            std::cout << fruit.getName() << ", " << fruit.getOrigin() << ", " << fruit.getProducer() << ", "
+                      << fruit.getExpirationDate().getDateAsFormattedString() << ", " << fruit.getQuantity() << ", "
+                      << fruit.getPrice() << std::endl;
+        }
     }
     catch (std::exception &e) {
         std::cout << "Error: " << e.what() << std::endl;
     }
 }
 
+///Display all products that are under a quantity threshold
 void UI::UserInterface::displayLowQuantityProducts() {
     int quantity;
 
@@ -134,13 +147,26 @@ void UI::UserInterface::displayLowQuantityProducts() {
     std::cin >> quantity;
 
     try {
-
+        auto fruits = controller.getLowQuantityFruits(quantity);
+        std::cout << "Products in low supply: " << std::endl;
+        for (const auto &fruit: *fruits) {
+            std::cout << fruit.getName() << ", " << fruit.getOrigin() << ", " << fruit.getProducer() << ", "
+                      << fruit.getExpirationDate().getDateAsFormattedString() << ", " << fruit.getQuantity() << ", "
+                      << fruit.getPrice() << std::endl;
+        }
     }
     catch (std::exception &e) {
         std::cout << "Error: " << e.what() << std::endl;
     }
 }
 
+///Display all products sorted by their expiry Date
 void UI::UserInterface::displayProductsByExpirationDate() {
-
+    auto fruits = controller.getFruitsByExpirationDate();
+    std::cout << "Products sorted by expiration date:" << std::endl;
+    for (const auto &fruit: *fruits) {
+        std::cout << fruit.getName() << ", " << fruit.getOrigin() << ", " << fruit.getProducer() << ", "
+                  << fruit.getExpirationDate().getDateAsFormattedString() << ", " << fruit.getQuantity() << ", "
+                  << fruit.getPrice() << std::endl;
+    }
 }

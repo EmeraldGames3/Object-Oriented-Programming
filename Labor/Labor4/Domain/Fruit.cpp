@@ -86,6 +86,7 @@ void Fruit::setPrice(float newPrice) {
     price = newPrice;
 }
 
+///Overloaded comparison operators ///
 bool Domain::Fruit::operator==(const Fruit& other) const {
     return (name == other.name) && (origin == other.origin);
 }
@@ -110,6 +111,7 @@ bool Fruit::operator>=(const Fruit &other) const {
     return (*this > other) || (*this == other);
 }
 
+///Overloaded cout for the Fruit class
 std::ostream &Domain::operator<<(std::ostream &os, const Fruit &fruit) {
     os << "Name: " + fruit.name + "\n";
     os << "Origin: " + fruit.origin + "\n";
