@@ -1,2 +1,12 @@
-Apple,USA,Apple Inc.,2023-05-01,10,1
-Banana,Ecuador,Fruit Co.,2023-04-30,5,2
+Apple,USA,Apple Inc,2023-5-1,10,1.00
+Banana,Ecuador,Fruit Co,2023-4-30,5,2.00
+Orange, Spain, Orange Co, 2023-05-20, 12, 0.80
+Mango, Mexico, Tropical Foods, 2023-05-15, 8, 2.50
+Pineapple, Costa Rica, Golden Fruit, 2023-05-25, 6, 3.00
+Kiwi, New Zealand, Kiwi Co, 2023-06-01, 15, 1.50
+Peach, Georgia, Peach Farms, 2023-05-10, 7, 1.20
+Watermelon, Brazil, Melon Farms, 2023-06-05, 3, 4.00
+Grapefruit, Florida, Citrus Co, 2023-05-30, 9, 0.90
+Papaya, Hawaii, Tropical Fruit Co, 2023-06-10, 4, 2.80
+Cherry, Washington, Cherry Farms, 2023-05-05, 11, 1.80
+Pear, China, Pear Co, 2023-05-08, 13, 1.10

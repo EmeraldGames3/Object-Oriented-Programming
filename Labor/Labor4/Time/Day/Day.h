@@ -4,6 +4,7 @@
 #include <string>
 
 namespace Time {
+    ///@deprecated
     class Day {
     private:
         short hour;

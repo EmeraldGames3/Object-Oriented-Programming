@@ -98,19 +98,19 @@ void testDateExtended(){
     {
         // Test case 1: Date with day, month, and year values of 1
         Time::Date date1(1, 1, 1);
-        assert(date1.getDateAsFormatedString() == "1-1-1");
+        assert(date1.getDateAsFormattedString() == "1-1-1");
 
         // Test case 2: Date with day, month, and year values of 31
         Time::Date date2(2022, 12, 31);
-        assert(date2.getDateAsFormatedString() == "2022-12-31");
+        assert(date2.getDateAsFormattedString() == "2022-12-31");
 
         // Test case 3: Date with day value of 10, month value of 2, and year value of 2023
         Time::Date date3(2023, 2, 10);
-        assert(date3.getDateAsFormatedString() == "2023-2-10");
+        assert(date3.getDateAsFormattedString() == "2023-2-10");
 
         // Test case 4: Date with day value of 29, month value of 2, and year value of 2024 (leap year)
         Time::Date date4(2024, 2, 29);
-        assert(date4.getDateAsFormatedString() == "2024-2-29");
+        assert(date4.getDateAsFormattedString() == "2024-2-29");
     }
 }
 

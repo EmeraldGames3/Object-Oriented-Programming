@@ -201,6 +201,30 @@ Repository/FruitRepository.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/Repository/FruitRepository.cpp.s
 .PHONY : Repository/FruitRepository.cpp.s
 
+Shop.o: Shop.cpp.o
+.PHONY : Shop.o
+
+# target to build an object file
+Shop.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/Shop.cpp.o
+.PHONY : Shop.cpp.o
+
+Shop.i: Shop.cpp.i
+.PHONY : Shop.i
+
+# target to preprocess a source file
+Shop.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/Shop.cpp.i
+.PHONY : Shop.cpp.i
+
+Shop.s: Shop.cpp.s
+.PHONY : Shop.s
+
+# target to generate assembly for a file
+Shop.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/Shop.cpp.s
+.PHONY : Shop.cpp.s
+
 Tests/TestAll.o: Tests/TestAll.cpp.o
 .PHONY : Tests/TestAll.o
 
@@ -225,6 +249,30 @@ Tests/TestAll.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/Tests/TestAll.cpp.s
 .PHONY : Tests/TestAll.cpp.s
 
+Tests/TestController/TestController.o: Tests/TestController/TestController.cpp.o
+.PHONY : Tests/TestController/TestController.o
+
+# target to build an object file
+Tests/TestController/TestController.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/Tests/TestController/TestController.cpp.o
+.PHONY : Tests/TestController/TestController.cpp.o
+
+Tests/TestController/TestController.i: Tests/TestController/TestController.cpp.i
+.PHONY : Tests/TestController/TestController.i
+
+# target to preprocess a source file
+Tests/TestController/TestController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/Tests/TestController/TestController.cpp.i
+.PHONY : Tests/TestController/TestController.cpp.i
+
+Tests/TestController/TestController.s: Tests/TestController/TestController.cpp.s
+.PHONY : Tests/TestController/TestController.s
+
+# target to generate assembly for a file
+Tests/TestController/TestController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/Tests/TestController/TestController.cpp.s
+.PHONY : Tests/TestController/TestController.cpp.s
+
 Tests/TestDomain/TestDomain.o: Tests/TestDomain/TestDomain.cpp.o
 .PHONY : Tests/TestDomain/TestDomain.o
 
@@ -248,6 +296,30 @@ Tests/TestDomain/TestDomain.s: Tests/TestDomain/TestDomain.cpp.s
 Tests/TestDomain/TestDomain.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/Tests/TestDomain/TestDomain.cpp.s
 .PHONY : Tests/TestDomain/TestDomain.cpp.s
+
+Tests/TestRepository/TestRepository.o: Tests/TestRepository/TestRepository.cpp.o
+.PHONY : Tests/TestRepository/TestRepository.o
+
+# target to build an object file
+Tests/TestRepository/TestRepository.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/Tests/TestRepository/TestRepository.cpp.o
+.PHONY : Tests/TestRepository/TestRepository.cpp.o
+
+Tests/TestRepository/TestRepository.i: Tests/TestRepository/TestRepository.cpp.i
+.PHONY : Tests/TestRepository/TestRepository.i
+
+# target to preprocess a source file
+Tests/TestRepository/TestRepository.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/Tests/TestRepository/TestRepository.cpp.i
+.PHONY : Tests/TestRepository/TestRepository.cpp.i
+
+Tests/TestRepository/TestRepository.s: Tests/TestRepository/TestRepository.cpp.s
+.PHONY : Tests/TestRepository/TestRepository.s
+
+# target to generate assembly for a file
+Tests/TestRepository/TestRepository.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/Tests/TestRepository/TestRepository.cpp.s
+.PHONY : Tests/TestRepository/TestRepository.cpp.s
 
 Tests/TestTime/TestDate/TestDate.o: Tests/TestTime/TestDate/TestDate.cpp.o
 .PHONY : Tests/TestTime/TestDate/TestDate.o
@@ -441,30 +513,6 @@ UI/UserInterface.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/UI/UserInterface.cpp.s
 .PHONY : UI/UserInterface.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labor4.dir/build.make CMakeFiles/Labor4.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -483,12 +531,21 @@ help:
 	@echo "... Repository/FruitRepository.o"
 	@echo "... Repository/FruitRepository.i"
 	@echo "... Repository/FruitRepository.s"
+	@echo "... Shop.o"
+	@echo "... Shop.i"
+	@echo "... Shop.s"
 	@echo "... Tests/TestAll.o"
 	@echo "... Tests/TestAll.i"
 	@echo "... Tests/TestAll.s"
+	@echo "... Tests/TestController/TestController.o"
+	@echo "... Tests/TestController/TestController.i"
+	@echo "... Tests/TestController/TestController.s"
 	@echo "... Tests/TestDomain/TestDomain.o"
 	@echo "... Tests/TestDomain/TestDomain.i"
 	@echo "... Tests/TestDomain/TestDomain.s"
+	@echo "... Tests/TestRepository/TestRepository.o"
+	@echo "... Tests/TestRepository/TestRepository.i"
+	@echo "... Tests/TestRepository/TestRepository.s"
 	@echo "... Tests/TestTime/TestDate/TestDate.o"
 	@echo "... Tests/TestTime/TestDate/TestDate.i"
 	@echo "... Tests/TestTime/TestDate/TestDate.s"
@@ -513,9 +570,6 @@ help:
 	@echo "... UI/UserInterface.o"
 	@echo "... UI/UserInterface.i"
 	@echo "... UI/UserInterface.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 

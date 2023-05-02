@@ -1,5 +1,7 @@
 #include "Date.h"
 
+///Default constructor
+///@throws invalid_argument If an invalid date is provided
 Time::Date::Date(int _year, int _month, int _day) {
     if (_year <= 0 || _month <= 0 || _day <= 0)
         throw std::invalid_argument("Time is represented as a positive integer");
@@ -21,22 +23,28 @@ Time::Date::Date(int _year, int _month, int _day) {
     day = _day;
 }
 
+///Year getter
 int Time::Date::getYear() const {
     return year;
 }
 
+///Month getter
 int Time::Date::getMonth() const {
     return month;
 }
 
+///Day getter
 int Time::Date::getDay() const {
     return day;
 }
 
-std::string Time::Date::getDateAsFormatedString() const {
+///Convert the date to a string
+std::string Time::Date::getDateAsFormattedString() const {
     return std::to_string(year) + '-' + std::to_string(month) + '-' + std::to_string(day);
 }
 
+///Year setter
+///@throws invalid_argument if an invalid year is provided
 void Time::Date::setYear(int newYear) {
     if (newYear >= 0)
         year = newYear;
@@ -44,6 +52,8 @@ void Time::Date::setYear(int newYear) {
         throw std::invalid_argument("Year cannot be negative.");
 }
 
+///Month setter
+///@throws invalid_argument if an invalid month is provided
 void Time::Date::setMonth(int newMonth) {
     if (newMonth >= 1 && newMonth <= 12)
         month = newMonth;
@@ -51,17 +61,21 @@ void Time::Date::setMonth(int newMonth) {
         throw std::invalid_argument("Month must be between 1 and 12.");
 }
 
+///Check if a year is a leap year
 bool isLeapYear(int year) {
     if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
         return true;
     return false;
 }
 
+///Find how many days are in a month
 int Time::Date::daysInMonth(int year, int month) {
     const int daysInMonth[] = {31, 28 + isLeapYear(year), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     return daysInMonth[month - 1];
 }
 
+///Day setter
+///@throws invalid_argument if the day is invalid
 void Time::Date::setDay(int newDay) {
     int daysInMonth = Date::daysInMonth(year, month);
     if (newDay >= 1 && newDay <= daysInMonth)
@@ -70,6 +84,7 @@ void Time::Date::setDay(int newDay) {
         throw std::invalid_argument("Day must be between 1 and " + std::to_string(daysInMonth));
 }
 
+///Overloaded assignment operator
 Time::Date &Time::Date::operator=(const Time::Date &other) {
     if (this != &other) {
         year = other.year;
@@ -79,6 +94,7 @@ Time::Date &Time::Date::operator=(const Time::Date &other) {
     return *this;
 }
 
+///Overloaded comparison operators ///
 bool Time::Date::operator>=(const Time::Date &other) const {
     return !(*this < other);
 }

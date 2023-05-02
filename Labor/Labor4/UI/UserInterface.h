@@ -2,26 +2,27 @@
 
 #include "../Time/Time.h"
 #include "../Domain/Domain.h"
+#include "../Controller/Controller.h"
 
 using Time::Date;
 using Domain::Fruit;
+using Controller::FruitController;
 
 namespace UI{
     class UserInterface{
     private:
-//        FruitController controller;
+        FruitController controller{};
 
     public:
-        static void run();
+        void run();
 
     private:
         static void displayMenu();
-        static void addProduct();
-        static void updateProduct();
-        static void removeProduct();
-        static void displayProductsByString();
-        static void displayLowQuantityProducts();
-        static void displayProductsByExpirationDate();
+        void addProduct();
+        void removeProduct();
+        void displayProductsByString();
+        void displayLowQuantityProducts();
+        void displayProductsByExpirationDate();
     };
 }
 

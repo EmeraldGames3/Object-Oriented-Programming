@@ -12,23 +12,21 @@ void UI::UserInterface::run() {
         switch (choice) {
             case 0:
                 cout << "Exiting program...\n";
+                controller.saveData();
                 break;
             case 1:
                 addProduct();
                 break;
             case 2:
-                updateProduct();
-                break;
-            case 3:
                 removeProduct();
                 break;
-            case 4:
+            case 3:
                 displayProductsByString();
                 break;
-            case 5:
+            case 4:
                 displayLowQuantityProducts();
                 break;
-            case 6:
+            case 5:
                 displayProductsByExpirationDate();
                 break;
             default:
@@ -41,90 +39,55 @@ void UI::UserInterface::run() {
 void UI::UserInterface::displayMenu() {
     cout << "\nFruit Store Management System\n\n"
          << "1. Add a product\n"
-         << "2. Update a product\n"
-         << "3. Remove a product\n"
-         << "4. Display products containing a certain string\n"
-         << "5. Display products with low quantity\n"
-         << "6. Display products sorted by expiration date\n"
+         << "2. Remove a product\n"
+         << "3. Display products containing a certain string\n"
+         << "4. Display products with low quantity\n"
+         << "5. Display products sorted by expiration date\n"
          << "0. Exit\n\n"
          << "Enter your choice: ";
 }
 
 void UI::UserInterface::addProduct() {
+    std::string input;
     std::string name, origin, producer;
-    int price, quantity, year, month, day;
+    int quantity, year, month, day;
+    float price;
 
     std::cout << "Enter product name: ";
-    std::cin >> name;
+    std::getline(std::cin, input);
+    std::stringstream(input) >> name;
 
     std::cout << "Enter product origin: ";
-    std::cin >> origin;
+    std::getline(std::cin, input);
+    std::stringstream(input) >> origin;
 
     std::cout << "Enter product producer: ";
-    std::cin >> producer;
+    std::getline(std::cin, input);
+    std::stringstream(input) >> producer;
 
     std::cout << "Enter product price: ";
-    std::cin >> price;
+    std::getline(std::cin, input);
+    std::stringstream(input) >> price;
 
     std::cout << "Enter product quantity: ";
-    std::cin >> quantity;
+    std::getline(std::cin, input);
+    std::stringstream(input) >> quantity;
 
     std::cout << "Enter product expiration date (year month day): ";
-    std::cin >> year >> month >> day;
+    std::getline(std::cin, input);
+    std::stringstream(input) >> year >> month >> day;
 
     while (year < 2023 || year > 2043 || month < 1 || month > 12 || day < 1 || day > Date::daysInMonth(year, month)) {
         std::cout << "Invalid date. Please enter a valid expiration date (year month day): ";
-        std::cin >> year >> month >> day;
+        std::getline(std::cin, input);
+        std::stringstream(input) >> year >> month >> day;
     }
 
     std::cout << '\n';
-
     Date expirationDate(year, month, day);
-    Fruit new_fruit(name, origin, producer, expirationDate, quantity, price);
 
     try {
-
-        std::cout << "Product added successfully." << std::endl;
-    }
-    catch (std::exception &e) {
-        std::cout << "Error: " << e.what() << std::endl;
-    }
-}
-
-void UI::UserInterface::updateProduct() {
-    std::string name, origin, producer;
-    int price, quantity, year, month, day;
-
-    std::cout << "Enter product name: ";
-    std::cin >> name;
-
-    std::cout << "Enter product origin: ";
-    std::cin >> origin;
-
-    std::cout << "Enter product producer: ";
-    std::cin >> producer;
-
-    std::cout << "Enter product price: ";
-    std::cin >> price;
-
-    std::cout << "Enter product quantity: ";
-    std::cin >> quantity;
-
-    std::cout << "Enter product expiration date (year month day): ";
-    std::cin >> year >> month >> day;
-
-    while (year < 2023 || year > 2043 || month < 1 || month > 12 || day < 1 || day > Date::daysInMonth(year, month)) {
-        std::cout << "Invalid date. Please enter a valid expiration date (year, month, day): ";
-        std::cin >> year >> month >> day;
-    }
-
-    std::cout << '\n';
-
-    Date expirationDate(year, month, day);
-    Fruit new_fruit(name, origin, producer, expirationDate, quantity, price);
-
-    try {
-
+        controller.addFruit(name, origin, producer, expirationDate, quantity, price);
         std::cout << "Product added successfully." << std::endl;
     }
     catch (std::exception &e) {
@@ -142,7 +105,7 @@ void UI::UserInterface::removeProduct() {
     std::cin >> origin;
 
     try {
-        // TODO implement
+        controller.deleteFruit(name, origin);
         std::cout << "Product removed successfully." << std::endl;
     }
     catch (std::exception &e) {

@@ -1,3 +1,4 @@
+#include <algorithm>
 #include "FruitRepository.h"
 
 Repository::FruitRepository::FruitRepository(string _fileName) : fileName(std::move(_fileName)) {
@@ -34,13 +35,14 @@ void Repository::FruitRepository::writeToDataBase() {
     file.close();
 }
 
-
 void Repository::FruitRepository::addFruit(const Fruit &fruit) {
     data->push_back(fruit);
 }
 
 void Repository::FruitRepository::deleteFruit(const Fruit &fruit) {
-    auto it = std::find(data->begin(), data->end(), fruit);
+    auto it = std::find_if(data->begin(), data->end(), [&](const Fruit& f){
+        return f.getName() == fruit.getName();
+    });
     if (it != data->end()) {
         data->erase(it);
     }

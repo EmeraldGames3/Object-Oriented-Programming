@@ -109,16 +109,31 @@
 		<Unit filename="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Repository/Repository.h">
 			<Option target="Labor4"/>
 		</Unit>
+		<Unit filename="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Shop.cpp">
+			<Option target="Labor4"/>
+		</Unit>
 		<Unit filename="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Tests/TestAll.cpp">
 			<Option target="Labor4"/>
 		</Unit>
 		<Unit filename="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Tests/TestAll.h">
 			<Option target="Labor4"/>
 		</Unit>
+		<Unit filename="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Tests/TestController/TestController.cpp">
+			<Option target="Labor4"/>
+		</Unit>
+		<Unit filename="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Tests/TestController/TestController.h">
+			<Option target="Labor4"/>
+		</Unit>
 		<Unit filename="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Tests/TestDomain/TestDomain.cpp">
 			<Option target="Labor4"/>
 		</Unit>
 		<Unit filename="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Tests/TestDomain/TestDomain.h">
+			<Option target="Labor4"/>
+		</Unit>
+		<Unit filename="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Tests/TestRepository/TestRepository.cpp">
+			<Option target="Labor4"/>
+		</Unit>
+		<Unit filename="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Tests/TestRepository/TestRepository.h">
 			<Option target="Labor4"/>
 		</Unit>
 		<Unit filename="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/Tests/TestTime/TestDate/TestDate.cpp">
@@ -173,9 +188,6 @@
 			<Option target="Labor4"/>
 		</Unit>
 		<Unit filename="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/UI/UserInterface.h">
-			<Option target="Labor4"/>
-		</Unit>
-		<Unit filename="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/main.cpp">
 			<Option target="Labor4"/>
 		</Unit>
 		<Unit filename="/home/bogdan/Programming/Uni/Object Oriented Programming/Labor/Labor4/CMakeLists.txt">

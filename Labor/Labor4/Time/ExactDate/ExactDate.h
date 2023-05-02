@@ -3,6 +3,7 @@
 #include "../Day/Day.h"
 
 namespace Time {
+    ///@deprecated
     class ExactDate {
     private:
         int year;

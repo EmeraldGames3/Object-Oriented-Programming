@@ -52,7 +52,7 @@ std::string Domain::Fruit::getFruitAsFormattedString() {
     stream << std::fixed << std::setprecision(2) << price;
     std::string formattedPrice = stream.str();
 
-    return name + ',' + origin + ',' + producer + ',' + expirationDate.getDateAsFormatedString() + ',' +
+    return name + ',' + origin + ',' + producer + ',' + expirationDate.getDateAsFormattedString() + ',' +
            std::to_string(quantity) + ',' + formattedPrice;
 }
 
@@ -114,7 +114,7 @@ std::ostream &Domain::operator<<(std::ostream &os, const Fruit &fruit) {
     os << "Name: " + fruit.name + "\n";
     os << "Origin: " + fruit.origin + "\n";
     os << "Producer: " + fruit.producer + "\n";
-    os << "Expiration Date: " + fruit.expirationDate.getDateAsFormatedString() + "\n";
+    os << "Expiration Date: " + fruit.expirationDate.getDateAsFormattedString() + "\n";
     os << "Quantity: " + std::to_string(fruit.quantity) + "\n";
     os << "Price: " + std::to_string(fruit.price) + "\n";
     return os;

@@ -32,8 +32,8 @@ namespace Controller {
         ///Data Manipulation
         void addFruit(const string &name, const string &origin, const string &producer, const Time::Date &expiryDate,
                       int quantity, float price);
-
         void deleteFruit(const string &name, const string &origin);
+        void saveData();
         unique_ptr<vector<Fruit>> getAllFruits();
         unique_ptr<vector<Fruit>> findFruits(const string &searchString);
     };

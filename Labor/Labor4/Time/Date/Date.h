@@ -23,7 +23,7 @@ namespace Time {
         [[nodiscard]] int getYear() const;
         [[nodiscard]] int getMonth() const;
         [[nodiscard]] int getDay() const;
-        [[nodiscard]] std::string getDateAsFormatedString() const;
+        [[nodiscard]] std::string getDateAsFormattedString() const;
 
         ///Setters
         void setYear(int newYear);
