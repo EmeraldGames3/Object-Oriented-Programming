@@ -2,7 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Seminar5"
+			"path" : "Seminar5.exe"
+		},
+		{
+			"path" : "Seminar5.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -68,12 +71,16 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "Seminar5",
-	"nameOnDisk" : "Seminar5",
+	"nameOnDisk" : "Seminar5.exe",
 	"paths" : 
 	{
 		"build" : ".",
