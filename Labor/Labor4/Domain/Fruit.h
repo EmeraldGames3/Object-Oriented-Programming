@@ -36,7 +36,7 @@ namespace Domain {
         [[nodiscard]] Date getExpirationDate() const;
         [[nodiscard]] int getQuantity() const;
         [[nodiscard]] float getPrice() const;
-        [[nodiscard]] std::string getFruitAsFormattedString();
+        [[nodiscard]] string getFruitAsFormattedString();
 
         ///Setters
         void setName(const string &newName);
