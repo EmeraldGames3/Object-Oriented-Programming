@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = D$:/Programming/Object-Oriented-Programming/Labor/Labor3/cmake-build-debug/
+cmake_ninja_workdir = D$:/Programming/Object-Oriented-Programming/Labor/Labor3/cmake-build-debug-coverage/
 # =============================================================================
 # Object build statements for EXECUTABLE target Labor3
 
@@ -51,7 +51,7 @@ build cmake_object_order_depends_target_Labor3: phony || CMakeFiles/Labor3.dir
 
 build CMakeFiles/Labor3.dir/main.cpp.obj: CXX_COMPILER__Labor3_Debug D$:/Programming/Object-Oriented-Programming/Labor/Labor3/main.cpp || cmake_object_order_depends_target_Labor3
   DEP_FILE = CMakeFiles\Labor3.dir\main.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu++20
+  FLAGS = --coverage -g -fdiagnostics-color=always -std=gnu++20
   OBJECT_DIR = CMakeFiles\Labor3.dir
   OBJECT_FILE_DIR = CMakeFiles\Labor3.dir
   TARGET_COMPILE_PDB = CMakeFiles\Labor3.dir\
@@ -59,7 +59,7 @@ build CMakeFiles/Labor3.dir/main.cpp.obj: CXX_COMPILER__Labor3_Debug D$:/Program
 
 build CMakeFiles/Labor3.dir/DependancyStructuredMatrix.cpp.obj: CXX_COMPILER__Labor3_Debug D$:/Programming/Object-Oriented-Programming/Labor/Labor3/DependancyStructuredMatrix.cpp || cmake_object_order_depends_target_Labor3
   DEP_FILE = CMakeFiles\Labor3.dir\DependancyStructuredMatrix.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu++20
+  FLAGS = --coverage -g -fdiagnostics-color=always -std=gnu++20
   OBJECT_DIR = CMakeFiles\Labor3.dir
   OBJECT_FILE_DIR = CMakeFiles\Labor3.dir
   TARGET_COMPILE_PDB = CMakeFiles\Labor3.dir\
@@ -67,7 +67,7 @@ build CMakeFiles/Labor3.dir/DependancyStructuredMatrix.cpp.obj: CXX_COMPILER__La
 
 build CMakeFiles/Labor3.dir/TestMatrix.cpp.obj: CXX_COMPILER__Labor3_Debug D$:/Programming/Object-Oriented-Programming/Labor/Labor3/TestMatrix.cpp || cmake_object_order_depends_target_Labor3
   DEP_FILE = CMakeFiles\Labor3.dir\TestMatrix.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu++20
+  FLAGS = --coverage -g -fdiagnostics-color=always -std=gnu++20
   OBJECT_DIR = CMakeFiles\Labor3.dir
   OBJECT_FILE_DIR = CMakeFiles\Labor3.dir
   TARGET_COMPILE_PDB = CMakeFiles\Labor3.dir\
@@ -82,7 +82,7 @@ build CMakeFiles/Labor3.dir/TestMatrix.cpp.obj: CXX_COMPILER__Labor3_Debug D$:/P
 # Link the executable Labor3.exe
 
 build Labor3.exe: CXX_EXECUTABLE_LINKER__Labor3_Debug CMakeFiles/Labor3.dir/main.cpp.obj CMakeFiles/Labor3.dir/DependancyStructuredMatrix.cpp.obj CMakeFiles/Labor3.dir/TestMatrix.cpp.obj
-  FLAGS = -g
+  FLAGS = --coverage -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Labor3.dir
   POST_BUILD = cd .
@@ -97,7 +97,7 @@ build Labor3.exe: CXX_EXECUTABLE_LINKER__Labor3_Debug CMakeFiles/Labor3.dir/main
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\Programming\Object-Oriented-Programming\Labor\Labor3\cmake-build-debug && C:\Users\boboo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.9011.31\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D D:\Programming\Object-Oriented-Programming\Labor\Labor3\cmake-build-debug-coverage && C:\Users\boboo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.9011.31\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -108,7 +108,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\Programming\Object-Oriented-Programming\Labor\Labor3\cmake-build-debug && C:\Users\boboo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.9011.31\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SD:\Programming\Object-Oriented-Programming\Labor\Labor3 -BD:\Programming\Object-Oriented-Programming\Labor\Labor3\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D D:\Programming\Object-Oriented-Programming\Labor\Labor3\cmake-build-debug-coverage && C:\Users\boboo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.9011.31\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SD:\Programming\Object-Oriented-Programming\Labor\Labor3 -BD:\Programming\Object-Oriented-Programming\Labor\Labor3\cmake-build-debug-coverage"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -126,7 +126,7 @@ build Labor3: phony Labor3.exe
 # =============================================================================
 
 #############################################
-# Folder: D:/Programming/Object-Oriented-Programming/Labor/Labor3/cmake-build-debug
+# Folder: D:/Programming/Object-Oriented-Programming/Labor/Labor3/cmake-build-debug-coverage
 
 build all: phony Labor3.exe
 

@@ -2,7 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Labor3"
+			"path" : "Labor3.exe"
+		},
+		{
+			"path" : "Labor3.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -35,7 +38,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -fdiagnostics-color=always"
+					"fragment" : "--coverage -g -fdiagnostics-color=always"
 				},
 				{
 					"fragment" : "-std=gnu++20"
@@ -64,18 +67,22 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
+				"fragment" : "--coverage -g",
 				"role" : "flags"
 			},
 			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "Labor3",
-	"nameOnDisk" : "Labor3",
+	"nameOnDisk" : "Labor3.exe",
 	"paths" : 
 	{
 		"build" : ".",
